@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Africa Samurai Consulting : Votre partenaire stratégique pour le développement et l'innovation en Afrique. Expertise en technologie, formation et collaborations internationales.">
+    <meta name="description"
+        content="Africa Samurai Consulting : Votre partenaire stratégique pour le développement et l'innovation en Afrique. Expertise en technologie, formation et collaborations internationales.">
     <title>Africa Samurai Consulting</title>
     <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,6 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script>
         tailwind.config = {
             theme: {
@@ -32,47 +34,85 @@
             }
         }
     </script>
-    <style>
-        body {
-            font-family: 'Cormorant Garamond', serif;
-        }
-    </style>
 </head>
 
 <body class="bg-white font-cormorant text-primary">
     <!-- Modal pour Calendly -->
-    <div id="calendly-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
-        <div class="bg-white w-full h-full relative">
-            <button id="close-modal" class="absolute top-4 right-4 text-3xl text-primary hover:text-secondary">&times;</button>
-            <iframe src="https://calendly.com/baroka/connecting-meeting" style="width:100%; height:100%;"></iframe>
-        </div>
+    <div id="calendly-modal" class="fixed inset-0 bg-white z-[9999] hidden">
+        <button id="close-modal" class="absolute top-4 right-4 text-3xl text-primary hover:text-secondary z-[10000]">
+            <i data-lucide="x"></i>
+        </button>
+        <iframe src="https://calendly.com/baroka/connecting-meeting" class="w-full h-full border-none"></iframe>
     </div>
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="flex items-center">
+                    <img src="./assets/africa-samurai-logo.png" alt="Africa Samurai Consulting Logo" class="h-12 w-auto">
+                </a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-primary hover:text-secondary transition duration-300">À Propos</a>
+                    <a href="#history" class="text-primary hover:text-secondary transition duration-300">Achievement</a>
+                    <a href="#partners" class="text-primary hover:text-secondary transition duration-300">Partenaires</a>
+                    <a href="#events" class="text-primary hover:text-secondary transition duration-300">Future</a>
+                    <a href="#" class="bg-secondary text-primary px-6 py-3 rounded-full hover:bg-primary hover:text-white transition duration-300 calendly-trigger">Prendre rendez-vous</a>
+                </div>
+                <button class="md:hidden text-primary focus:outline-none" id="mobile-menu-button" aria-label="Menu">
+                    <i data-lucide="menu" class="w-8 h-8"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Menu mobile -->
+        <div id="mobile-menu" class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50">
+            <div class="p-4">
+                <button class="text-primary focus:outline-none mb-4" id="close-mobile-menu">
+                    <i data-lucide="x" class="w-8 h-8"></i>
+                </button>
+                <ul class="space-y-4">
+                    <li><a href="#about" class="block text-primary hover:text-secondary transition duration-300">À Propos</a></li>
+                    <li><a href="#history" class="block text-primary hover:text-secondary transition duration-300">Achievement</a></li>
+                    <li><a href="#partners" class="block text-primary hover:text-secondary transition duration-300">Partenaires</a></li>
+                    <li><a href="#events" class="block text-primary hover:text-secondary transition duration-300">Future</a></li>
+                    <li><a href="#" class="block bg-secondary text-primary px-6 py-3 rounded-full hover:bg-primary hover:text-white transition duration-300 calendly-trigger">Prendre rendez-vous</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Overlay pour le menu mobile -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black opacity-50 z-40 hidden md:hidden"></div>
 
     <!-- Boutons de traduction flottants -->
     <div class="fixed top-1/2 right-4 transform -translate-y-1/2 z-50 flex flex-col space-y-2">
-        <button id="fr-btn" class="bg-primary text-white px-4 py-2 rounded-full hover:bg-secondary transition duration-300">FR</button>
-        <button id="en-btn" class="bg-primary text-white px-4 py-2 rounded-full hover:bg-secondary transition duration-300">EN</button>
-        <button id="jp-btn" class="bg-primary text-white px-4 py-2 rounded-full hover:bg-secondary transition duration-300">JP</button>
+        <button id="fr-btn"
+            class="bg-primary text-white px-4 py-2 rounded-full hover:bg-secondary transition duration-300">FR</button>
+        <button id="en-btn"
+            class="bg-primary text-white px-4 py-2 rounded-full hover:bg-secondary transition duration-300">EN</button>
+        <button id="jp-btn"
+            class="bg-primary text-white px-4 py-2 rounded-full hover:bg-secondary transition duration-300">JP</button>
     </div>
 
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center">
+    <section class="min-h-screen flex items-center pt-20">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
                     <h1 class="text-6xl md:text-8xl font-bold mb-4 leading-tight">Africa <span
                             class="text-secondary">Samurai</span></h1>
                     <h1 class="text-6xl md:text-8xl font-bold mb-4 text-primary">Consulting</h2>
-                    <p class="text-2xl mb-8 text-primary">Connecter l'Afrique au monde à travers une <strong class="font-bold animate-pulse">éducation de
-                        qualité</strong> pour les jeunes et l'<strong class="font-bold animate-pulse">innovation technologique</strong></p>
-                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                        <a href="#about"
-                            class="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-secondary hover:text-primary transition duration-300 text-center text-xl calendly-trigger">Qui
-                            sommes-nous</a>
-                    </div>
+                        <p class="text-2xl mb-8 text-primary">Connecter l'Afrique au monde à travers une <strong
+                                class="font-bold animate-pulse">éducation de
+                                qualité</strong> pour les jeunes et l'<strong class="font-bold animate-pulse">innovation
+                                technologique</strong></p>
+                        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                            <a href="#about"
+                                class="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-secondary hover:text-primary transition duration-300 text-center text-xl"
+                                onclick="event.preventDefault(); document.querySelector('#about').scrollIntoView({behavior: 'smooth'});">Qui
+                                sommes-nous</a>
+                        </div>
                 </div>
                 <div class="md:w-1/2" data-aos="fade-left">
-                    <img src="./assets/africa-samurai-logo.png" alt="Africa Samurai Consulting Logo"
+                    <img src="./assets/africa-samurai-hero.png" alt="Africa Samurai Consulting Logo"
                         class="rounded-lg w-full">
                 </div>
             </div>
@@ -115,14 +155,16 @@
                         class="w-64 h-64 rounded-full mx-auto mb-4 object-cover">
                     <h3 class="text-2xl font-bold text-primary">Irotori Baroka</h3>
                     <p class="text-xl text-secondary">Co-fondateur et CEO</p>
-                    <p class="mt-2 text-primary">Expert en IA avec 10 ans d'expérience dans le domaine du Numérique, <br/> management d'entreprise et en Mentoring</p>
+                    <p class="mt-2 text-primary">Expert en IA avec 10 ans d'expérience dans le domaine du Numérique,
+                        <br /> management d'entreprise et en Mentoring</p>
                 </div>
                 <div class="text-center" data-aos="fade-left">
                     <img src="./assets/david-kpondehou.jpg" alt="David Kpondehou"
                         class="w-64 h-64 rounded-full mx-auto mb-4 object-cover">
                     <h3 class="text-2xl font-bold text-primary">David Kpondehou</h3>
                     <p class="text-xl text-secondary">Co-fondateur et COO</p>
-                    <p class="mt-2 text-primary">Spécialiste en développement d'affaires internationales <br /> et Président de la Diasporat Africaine au Japon
+                    <p class="mt-2 text-primary">Spécialiste en développement d'affaires internationales <br /> et
+                        Président de la Diasporat Africaine au Japon
                     </p>
                 </div>
             </div>
@@ -251,7 +293,8 @@
     <!-- Impact Section -->
     <section id="impact" class="py-20 bg-gray-100">
         <div class="container mx-auto px-4">
-            <h2 class="text-5xl md:text-7xl font-bold text-center mb-16 text-primary" data-aos="fade-up">Notre Impact en Chiffres</h2>
+            <h2 class="text-5xl md:text-7xl font-bold text-center mb-16 text-primary" data-aos="fade-up">Notre Impact en
+                Chiffres</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <div class="bg-white rounded-lg shadow-lg p-8 text-center" data-aos="fade-up">
                     <i data-lucide="trending-up" class="w-16 h-16 mx-auto mb-4 text-primary"></i>
@@ -266,14 +309,16 @@
                 <div class="bg-white rounded-lg shadow-lg p-8 text-center" data-aos="fade-up" data-aos-delay="200">
                     <i data-lucide="award" class="w-16 h-16 mx-auto mb-4 text-primary"></i>
                     <h3 class="text-3xl font-bold mb-2 text-primary">100+</h3>
-                    <p class="text-xl text-primary">Opportunité de Bourses d'études au Japon offerte au Jeune de notre réseau</p>
+                    <p class="text-xl text-primary">Opportunité de Bourses d'études au Japon offerte au Jeune de notre
+                        réseau</p>
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8">
                 <div class="bg-white rounded-lg shadow-lg p-8 text-center" data-aos="fade-up" data-aos-delay="300">
                     <i data-lucide="dollar-sign" class="w-16 h-16 mx-auto mb-4 text-primary"></i>
                     <h3 class="text-3xl font-bold mb-2 text-primary">100M+</h3>
-                    <p class="text-xl text-primary">FCFA collectés et investis en formation, bourse d'etudes et conferences</p>
+                    <p class="text-xl text-primary">FCFA collectés et investis en formation, bourse d'etudes et
+                        conferences</p>
                 </div>
                 <div class="bg-white rounded-lg shadow-lg p-8 text-center" data-aos="fade-up" data-aos-delay="400">
                     <i data-lucide="globe" class="w-16 h-16 mx-auto mb-4 text-primary"></i>
@@ -283,13 +328,15 @@
             </div>
             <div class="mt-16 text-center">
                 <p class="text-2xl font-bold text-primary mb-8">Envie de faire partie de notre succès ?</p>
-                <a href="#" class="bg-primary text-white text-xl px-8 py-4 rounded-full hover:bg-secondary transition duration-300 calendly-trigger">Discutons en !</a>
+                <a href="#"
+                    class="bg-primary text-white text-xl px-8 py-4 rounded-full hover:bg-secondary transition duration-300 calendly-trigger">Discutons
+                    en !</a>
             </div>
         </div>
     </section>
 
-     <!-- Nos Partenaires Section -->
-     <section id="partners" class="py-20 bg-gray-100">
+    <!-- Nos Partenaires Section -->
+    <section id="partners" class="py-20 bg-gray-100">
         <div class="container mx-auto px-4">
             <h2 class="text-5xl md:text-7xl font-bold text-center mb-16 text-primary" data-aos="fade-up">Nos Partenaires
             </h2>
@@ -381,8 +428,10 @@
                     <img src="./assets/vision-future.jpg" alt="Vision pour l'avenir" class="rounded-2xl w-full h-auto">
                 </div>
                 <div class="md:w-1/2 md:pl-8" data-aos="fade-left">
-                    <h2 class="text-4xl md:text-6xl font-bold text-primary mb-6">Notre Vision Audacieuse pour l'Afrique de Demain</h2>
-                    <p class="text-xl">Nous nous engageons à façonner un avenir brillant et innovant pour le continent africain, en combinant expertise technologique et collaborations stratégiques.</p>
+                    <h2 class="text-4xl md:text-6xl font-bold text-primary mb-6">Notre Vision Audacieuse pour l'Afrique
+                        de Demain</h2>
+                    <p class="text-xl">Nous nous engageons à façonner un avenir brillant et innovant pour le continent
+                        africain, en combinant expertise technologique et collaborations stratégiques.</p>
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -406,8 +455,11 @@
                 </div>
             </div>
             <div class="mt-12 text-center" data-aos="fade-up" data-aos-delay="300">
-                <p class="text-2xl text-primary mb-8">Ensemble, façonnons un avenir radieux pour l'Afrique... Embarquez dans cette aventure extraordinaire</p>
-                <a href="#contact" class="bg-primary text-white text-xl font-bold py-3 px-8 rounded-full hover:bg-primary-dark transition duration-300 calendly-trigger">Prendre Rendez-vous !</a>
+                <p class="text-2xl text-primary mb-8">Ensemble, façonnons un avenir radieux pour l'Afrique... Embarquez
+                    dans cette aventure extraordinaire</p>
+                <a href="#contact"
+                    class="bg-primary text-white text-xl font-bold py-3 px-8 rounded-full hover:bg-primary-dark transition duration-300 calendly-trigger">Prendre
+                    Rendez-vous !</a>
             </div>
         </div>
     </section>
@@ -432,17 +484,16 @@
             });
         }
 
-        // Fonction pour ouvrir le modal Calendly
         function openCalendlyModal() {
             document.getElementById('calendly-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
         }
 
-        // Fonction pour fermer le modal Calendly
         function closeCalendlyModal() {
             document.getElementById('calendly-modal').classList.add('hidden');
+            document.body.style.overflow = '';
         }
 
-        // Ajouter des écouteurs d'événements pour les boutons de traduction, les boutons CTA et le bouton de fermeture
         document.addEventListener('DOMContentLoaded', () => {
             const frBtn = document.getElementById('fr-btn');
             const enBtn = document.getElementById('en-btn');
@@ -462,8 +513,52 @@
             });
 
             closeModalBtn.addEventListener('click', closeCalendlyModal);
+
+            // Initialiser les icônes Lucide
+            lucide.createIcons();
+
+            // Fermer le modal si on clique en dehors de l'iframe
+            document.getElementById('calendly-modal').addEventListener('click', (e) => {
+                if (e.target === e.currentTarget) {
+                    closeCalendlyModal();
+                }
+            });
+
+            // Gestion de la navigation responsive
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+            function openMobileMenu() {
+                mobileMenu.classList.remove('-translate-x-full');
+                mobileMenu.classList.add('translate-x-0');
+                mobileMenuOverlay.classList.remove('hidden');
+            }
+
+            function closeMobileMenu() {
+                mobileMenu.classList.add('-translate-x-full');
+                mobileMenu.classList.remove('translate-x-0');
+                mobileMenuOverlay.classList.add('hidden');
+            }
+
+            mobileMenuButton.addEventListener('click', openMobileMenu);
+            closeMobileMenuButton.addEventListener('click', closeMobileMenu);
+            mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+            // Fermer le menu mobile lorsqu'un lien est cliqué
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+
+            // Gérer le redimensionnement de la fenêtre
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768) {
+                    closeMobileMenu();
+                }
+            });
         });
     </script>
 </body>
-
 </html>
