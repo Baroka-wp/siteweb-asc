@@ -18,6 +18,7 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script>
         tailwind.config = {
             theme: {
@@ -44,18 +45,22 @@
         </button>
         <iframe src="https://calendly.com/baroka/connecting-meeting" class="w-full h-full border-none"></iframe>
     </div>
-    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+    <nav class="top-0 left-0 right-0 bg-white z-50">
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
                 <a href="#" class="flex items-center">
-                    <img src="./assets/africa-samurai-logo.png" alt="Africa Samurai Consulting Logo" class="h-12 w-auto">
+                    <img src="./assets/africa-samurai-logo.png" alt="Africa Samurai Consulting Logo"
+                        class="h-12 w-auto">
                 </a>
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="#about" class="text-primary hover:text-secondary transition duration-300">À Propos</a>
                     <a href="#history" class="text-primary hover:text-secondary transition duration-300">Achievement</a>
-                    <a href="#partners" class="text-primary hover:text-secondary transition duration-300">Partenaires</a>
+                    <a href="#partners"
+                        class="text-primary hover:text-secondary transition duration-300">Partenaires</a>
                     <a href="#events" class="text-primary hover:text-secondary transition duration-300">Future</a>
-                    <a href="#" class="bg-secondary text-primary px-6 py-3 rounded-full hover:bg-primary hover:text-white transition duration-300 calendly-trigger">Prendre rendez-vous</a>
+                    <a href="#"
+                        class="bg-secondary text-primary px-6 py-3 rounded-full hover:bg-primary hover:text-white transition duration-300 calendly-trigger">Prendre
+                        rendez-vous</a>
                 </div>
                 <button class="md:hidden text-primary focus:outline-none" id="mobile-menu-button" aria-label="Menu">
                     <i data-lucide="menu" class="w-8 h-8"></i>
@@ -63,24 +68,31 @@
             </div>
         </div>
         <!-- Menu mobile -->
-        <div id="mobile-menu" class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50">
+        <div id="mobile-menu"
+            class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-[1000]">
             <div class="p-4">
                 <button class="text-primary focus:outline-none mb-4" id="close-mobile-menu">
                     <i data-lucide="x" class="w-8 h-8"></i>
                 </button>
                 <ul class="space-y-4">
-                    <li><a href="#about" class="block text-primary hover:text-secondary transition duration-300">À Propos</a></li>
-                    <li><a href="#history" class="block text-primary hover:text-secondary transition duration-300">Achievement</a></li>
-                    <li><a href="#partners" class="block text-primary hover:text-secondary transition duration-300">Partenaires</a></li>
-                    <li><a href="#events" class="block text-primary hover:text-secondary transition duration-300">Future</a></li>
-                    <li><a href="#" class="block bg-secondary text-primary px-6 py-3 rounded-full hover:bg-primary hover:text-white transition duration-300 calendly-trigger">Prendre rendez-vous</a></li>
+                    <li><a href="#about" class="block text-primary hover:text-secondary transition duration-300">À
+                            Propos</a></li>
+                    <li><a href="#history"
+                            class="block text-primary hover:text-secondary transition duration-300">Achievement</a></li>
+                    <li><a href="#partners"
+                            class="block text-primary hover:text-secondary transition duration-300">Partenaires</a></li>
+                    <li><a href="#events"
+                            class="block text-primary hover:text-secondary transition duration-300">Future</a></li>
+                    <li><a href="#"
+                            class="block bg-secondary text-primary px-6 py-3 rounded-full hover:bg-primary hover:text-white transition duration-300 calendly-trigger">Prendre
+                            rendez-vous</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Overlay pour le menu mobile -->
-    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black opacity-50 z-40 hidden md:hidden"></div>
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black opacity-50 z-[999] hidden md:hidden"></div>
 
     <!-- Boutons de traduction flottants -->
     <div class="fixed top-1/2 right-4 transform -translate-y-1/2 z-50 flex flex-col space-y-2">
@@ -156,13 +168,14 @@
                     <h3 class="text-2xl font-bold text-primary">Irotori Baroka</h3>
                     <p class="text-xl text-secondary">Co-fondateur et CEO</p>
                     <p class="mt-2 text-primary">Expert en IA avec 10 ans d'expérience dans le domaine du Numérique,
-                        <br /> management d'entreprise et en Mentoring</p>
+                        <br /> management d'entreprise et en Mentoring
+                    </p>
                 </div>
                 <div class="text-center" data-aos="fade-left">
                     <img src="./assets/david-kpondehou.jpg" alt="David Kpondehou"
                         class="w-64 h-64 rounded-full mx-auto mb-4 object-cover">
                     <h3 class="text-2xl font-bold text-primary">David Kpondehou</h3>
-                    <p class="text-xl text-secondary">Co-fondateur et COO</p>
+                    <p class="text-xl text-secondary">Co-fondateur</p>
                     <p class="mt-2 text-primary">Spécialiste en développement d'affaires internationales <br /> et
                         Président de la Diasporat Africaine au Japon
                     </p>
@@ -463,68 +476,82 @@
             </div>
         </div>
     </section>
+    <!-- Section Témoignages -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-6xl font-bold text-center mb-12 text-primary" data-aos="fade-up">Témoignages</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-bold text-primary mb-2">Aminata Diallo</h3>
+                    <p class="text-lg text-gray-700 italic">"Grâce à la formation en IA d'Africa Samurai, j'ai décroché un poste de data scientist à Dakar."</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold text-primary mb-2">Kofi Mensah</h3>
+                    <p class="text-lg text-gray-700 italic">"La bourse d'études m'a permis d'étudier l'ingénierie robotique au Japon. Aujourd'hui, je dirige ma start-up à Accra."</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl font-bold text-primary mb-2">Fatou Ndiaye</h3>
+                    <p class="text-lg text-gray-700 italic">"Le programme de mentorat m'a guidée dans ma carrière en cybersécurité. J'ai un poste de responsable IT à Abidjan."</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-2xl font-bold text-primary mb-2">Yannick Kamga</h3>
+                    <p class="text-lg text-gray-700 italic">"Le bootcamp en développement web a été le tremplin de ma carrière. Je suis maintenant développeur full-stack."</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300" data-aos="fade-up" data-aos-delay="500">
+                    <h3 class="text-2xl font-bold text-primary mb-2">Aisha Mohammed</h3>
+                    <p class="text-lg text-gray-700 italic">"J'ai participé à un échange culturel au Japon, ce qui m'a aidée à décrocher un emploi dans une multinationale."</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300" data-aos="fade-up" data-aos-delay="600">
+                    <h3 class="text-2xl font-bold text-primary mb-2">Ousmane Sow</h3>
+                    <p class="text-lg text-gray-700 italic">"Le programme d'entrepreneuriat m'a donné les outils pour lancer ma start-up dans l'agritech."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Nouveau Footer -->
+     <footer class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <h1 class="text-8xl font-light text-gray-200 mb-8">Africa Samurai !<span
+                class="inline-block w-4 h-4 bg-white rounded-full ml-3"></span></h1>
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                    <svg class="w-10 h-10 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19 6.94L12.06 0L5.12 6.94C3.02 9.04 3.02 12.52 5.12 14.62L12.06 21.56L19 14.62C21.1 12.52 21.1 9.04 19 6.94ZM12.06 15.5C10.23 15.5 8.74 14.01 8.74 12.18C8.74 10.35 10.23 8.86 12.06 8.86C13.89 8.86 15.38 10.35 15.38 12.18C15.38 14.01 13.89 15.5 12.06 15.5Z"
+                            fill="currentColor" />
+                    </svg>
+                    <p class="text-gray-500 text-sm">
+                        © 2024 Africa Samurai<br>
+                        Tous droits réservés.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                    <h3 class="text-gray-600 font-light mb-4">Projects</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://decision-io.vercel.app/startup" class="text-gray-500 hover:text-gray-700">Decision</a></li>
+                        <li><a href="https://bootcamp.africasamurai.com/" class="text-gray-500 hover:text-gray-700">Ai Boost</a></li>
+                        <li><a href="https://exchange.africasamurai.com/" class="text-gray-500 hover:text-gray-700">Exchange Samurai</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/4">
+                    <h3 class="text-gray-600 font-light mb-4">Réseaux</h3>
+                    <ul class="space-y-2">
+                        <!-- <li><a href="#" class="text-gray-500 hover:text-gray-700">Twitter</a></li> -->
+                        <li><a href="https://www.linkedin.com/company/africa-samurai-consulting" class="text-gray-500 hover:text-gray-700">LinkedIn</a></li>
+                        <li><a href="https://www.facebook.com/AfricaSamurai" class="text-gray-500 hover:text-gray-700">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
     <script>
         lucide.createIcons();
         AOS.init();
 
-        // Fonction pour traduire le contenu de la page
-        function translatePage(targetLang) {
-            const elements = document.querySelectorAll('body *');
-            elements.forEach(element => {
-                if (element.childNodes.length === 1 && element.childNodes[0].nodeType === Node.TEXT_NODE) {
-                    const text = element.textContent;
-                    fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLang}&dt=t&q=${encodeURIComponent(text)}`)
-                        .then(response => response.json())
-                        .then(data => {
-                            element.textContent = data[0][0][0];
-                        })
-                        .catch(error => console.error('Erreur de traduction:', error));
-                }
-            });
-        }
-
-        function openCalendlyModal() {
-            document.getElementById('calendly-modal').classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeCalendlyModal() {
-            document.getElementById('calendly-modal').classList.add('hidden');
-            document.body.style.overflow = '';
-        }
-
         document.addEventListener('DOMContentLoaded', () => {
-            const frBtn = document.getElementById('fr-btn');
-            const enBtn = document.getElementById('en-btn');
-            const jpBtn = document.getElementById('jp-btn');
-            const calendlyTriggers = document.querySelectorAll('.calendly-trigger');
-            const closeModalBtn = document.getElementById('close-modal');
-
-            frBtn.addEventListener('click', () => translatePage('fr'));
-            enBtn.addEventListener('click', () => translatePage('en'));
-            jpBtn.addEventListener('click', () => translatePage('ja'));
-
-            calendlyTriggers.forEach(trigger => {
-                trigger.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    openCalendlyModal();
-                });
-            });
-
-            closeModalBtn.addEventListener('click', closeCalendlyModal);
-
-            // Initialiser les icônes Lucide
-            lucide.createIcons();
-
-            // Fermer le modal si on clique en dehors de l'iframe
-            document.getElementById('calendly-modal').addEventListener('click', (e) => {
-                if (e.target === e.currentTarget) {
-                    closeCalendlyModal();
-                }
-            });
-
-            // Gestion de la navigation responsive
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const closeMobileMenuButton = document.getElementById('close-mobile-menu');
             const mobileMenu = document.getElementById('mobile-menu');
@@ -534,12 +561,14 @@
                 mobileMenu.classList.remove('-translate-x-full');
                 mobileMenu.classList.add('translate-x-0');
                 mobileMenuOverlay.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Empêche le défilement du body
             }
 
             function closeMobileMenu() {
                 mobileMenu.classList.add('-translate-x-full');
                 mobileMenu.classList.remove('translate-x-0');
                 mobileMenuOverlay.classList.add('hidden');
+                document.body.style.overflow = ''; // Réactive le défilement du body
             }
 
             mobileMenuButton.addEventListener('click', openMobileMenu);
@@ -558,7 +587,11 @@
                     closeMobileMenu();
                 }
             });
+
+            // Initialiser les icônes Lucide
+            lucide.createIcons();
         });
     </script>
 </body>
+
 </html>
