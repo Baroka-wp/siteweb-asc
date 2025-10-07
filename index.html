@@ -10,8 +10,6 @@
     <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -45,7 +43,7 @@
         </button>
         <iframe src="https://calendly.com/baroka/connecting-meeting" class="w-full h-full border-none"></iframe>
     </div>
-    <nav class="top-0 left-0 right-0 bg-white z-50">
+    <nav class="top-0 left-0 right-0 nav-modern z-50 fixed">
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
                 <a href="#" class="flex items-center">
@@ -105,25 +103,27 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center pt-20">
-        <div class="container mx-auto px-4">
+    <section class="min-h-screen flex items-center pt-20 relative" style="background-color:white;">
+        <!-- Overlay pour améliorer la lisibilité -->
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="container mx-auto px-4 relative z-10">
             <div class="flex flex-col md:flex-row items-center justify-between">
-                <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
-                    <h1 class="text-6xl md:text-8xl font-bold mb-4 leading-tight">Africa <span
-                            class="text-secondary">Samurai</span></h1>
-                    <h1 class="text-6xl md:text-8xl font-bold mb-4 text-primary">Consulting</h2>
-                        <p class="text-2xl mb-8 text-primary">Connecter l'Afrique au monde à travers une <strong
-                                class="font-bold animate-pulse">éducation de
-                                qualité</strong> pour les jeunes et l'<strong class="font-bold animate-pulse">innovation
+                <div class="md:w-1/2 mb-8 md:mb-0" >
+                    <h1 class="text-6xl md:text-8xl font-bold mb-4 leading-tight text-white">Africa <span
+                            class="text-red-400">Samurai</span></h1>
+                    <h1 class="text-6xl md:text-8xl font-bold mb-4 text-white">Consulting</h1>
+                        <p class="text-2xl mb-8 text-white">Connecter l'Afrique au monde à travers une <strong
+                                class="font-bold text-red-400">éducation de
+                                qualité</strong> pour les jeunes et l'<strong class="font-bold text-red-400">innovation
                                 technologique</strong></p>
                         <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                             <a href="#about"
-                                class="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-secondary hover:text-primary transition duration-300 text-center text-xl"
+                                class="btn-japanese text-center text-xl"
                                 onclick="event.preventDefault(); document.querySelector('#about').scrollIntoView({behavior: 'smooth'});">Qui
                                 sommes-nous</a>
                         </div>
                 </div>
-                <div class="md:w-1/2" data-aos="fade-left">
+                <div class="md:w-1/2" >
                     <img src="./assets/africa-samurai-hero.png" alt="Africa Samurai Consulting Logo"
                         class="rounded-lg w-full">
                 </div>
@@ -132,76 +132,131 @@
     </section>
 
     <!-- À Propos Section -->
-    <section id="about" class="py-20 bg-gray-100">
+    <section id="about" class="section-japanese bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-5xl md:text-7xl font-bold text-center mb-16 text-primary" data-aos="fade-up">Qui sommes-nous
-                ?</h2>
-            <div class="max-w-4xl mx-auto text-xl text-primary mb-16" data-aos="fade-up">
-                <p class="mb-8">
-                    Africa Samurai Consulting est une entreprise de conseil spécialisée dans le transfert de
-                    technologies, l'éducation et les échanges culturels entre l'Afrique et le monde, avec un accent
-                    particulier sur le Japon.
-                </p>
-                <p class="mb-8">
-                    Fondée en 2018, notre entreprise s'est rapidement imposée comme un acteur clé dans le domaine de
-                    l'innovation technologique et des partenariats internationaux en Afrique.
-                </p>
-            </div>
-
-            <!-- Ajout de la vidéo YouTube -->
-            <div class="max-w-6xl mx-auto mb-16" data-aos="fade-up">
-                <h3 class="text-3xl font-bold mb-4 text-primary text-center">Découvrez notre histoire</h3>
-                <div class="aspect-w-16 aspect-h-9">
-                    <iframe src="https://www.youtube.com/embed/TGKhrOFIjjY" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen class="w-full h-[500px]"></iframe>
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-5xl md:text-7xl font-bold text-center mb-16 text-primary">Qui sommes-nous ?</h2>
+                
+                <!-- Introduction avec design moderne -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+                    <div class="space-y-6">
+                        <div class="card-japanese p-8">
+                            <h3 class="text-3xl font-bold mb-6 text-primary">Notre Mission</h3>
+                            <p class="text-lg text-gray-700 leading-relaxed">
+                                Africa Samurai Consulting est une entreprise de conseil spécialisée dans le transfert de
+                                technologies, l'éducation et les échanges culturels entre l'Afrique et le monde, avec un accent
+                                particulier sur le Japon.
+                            </p>
+                        </div>
+                        
+                        <div class="card-japanese p-8">
+                            <h3 class="text-3xl font-bold mb-6 text-primary">Notre Vision</h3>
+                            <p class="text-lg text-gray-700 leading-relaxed">
+                                Fondée en 2018, notre entreprise s'est rapidement imposée comme un acteur clé dans le domaine de
+                                l'innovation technologique et des partenariats internationaux en Afrique.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="card-japanese p-8">
+                            <h3 class="text-3xl font-bold mb-6 text-primary">Nos Valeurs</h3>
+                            <ul class="space-y-4 text-lg text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="text-red-600 text-2xl mr-3">•</span>
+                                    <span>Excellence dans l'éducation technologique</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-600 text-2xl mr-3">•</span>
+                                    <span>Innovation et créativité</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-600 text-2xl mr-3">•</span>
+                                    <span>Collaboration internationale</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-600 text-2xl mr-3">•</span>
+                                    <span>Développement durable</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card-japanese p-8">
+                            <h3 class="text-3xl font-bold mb-6 text-primary">Notre Impact</h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-red-600">150+</div>
+                                    <div class="text-sm text-gray-600">Startups créées</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-red-600">100+</div>
+                                    <div class="text-sm text-gray-600">Bourses offertes</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p class="mt-4 text-center text-lg text-secondary">Documentaire NHK World sur Africa Samurai Consulting
-                </p>
-            </div>
 
-            <div
-                class="flex flex-col md:flex-row justify-center items-center md:items-start space-y-12 md:space-y-0 md:space-x-12">
-                <div class="text-center" data-aos="fade-right">
-                    <img src="./assets/irotori-baroka.jpg" alt="Irotori Baroka"
-                        class="w-64 h-64 rounded-full mx-auto mb-4 object-cover">
-                    <h3 class="text-2xl font-bold text-primary">Irotori Baroka</h3>
-                    <p class="text-xl text-secondary">Co-fondateur et CEO</p>
-                    <p class="mt-2 text-primary">Expert en IA avec 10 ans d'expérience dans le domaine du Numérique,
-                        <br /> management d'entreprise et en Mentoring
-                    </p>
+                <!-- Vidéo YouTube avec design amélioré -->
+                <div class="max-w-4xl mx-auto mb-20">
+                    <div class="card-japanese p-8">
+                        <h3 class="text-3xl font-bold mb-6 text-primary text-center">Découvrez notre histoire</h3>
+                        <div class="aspect-w-16 aspect-h-9">
+                            <iframe src="https://www.youtube.com/embed/TGKhrOFIjjY" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen class="w-full h-[400px] rounded-lg"></iframe>
+                        </div>
+                        <p class="mt-4 text-center text-lg text-gray-600">Documentaire NHK World sur Africa Samurai Consulting</p>
+                    </div>
                 </div>
-                <div class="text-center" data-aos="fade-left">
-                    <img src="./assets/david-kpondehou.jpg" alt="David Kpondehou"
-                        class="w-64 h-64 rounded-full mx-auto mb-4 object-cover">
-                    <h3 class="text-2xl font-bold text-primary">David Kpondehou</h3>
-                    <p class="text-xl text-secondary">Co-fondateur</p>
-                    <p class="mt-2 text-primary">Spécialiste en développement d'affaires internationales <br /> et
-                        Président de la Diasporat Africaine au Japon
-                    </p>
+
+                <!-- Équipe avec design amélioré -->
+                <div class="mb-16">
+                    <h3 class="text-4xl font-bold text-center mb-12 text-primary">Notre Équipe</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <div class="card-japanese p-8 text-center">
+                            <img src="./assets/irotori-baroka.jpg" alt="Irotori Baroka"
+                                class="w-48 h-48 rounded-full mx-auto mb-6 object-cover shadow-lg">
+                            <h4 class="text-2xl font-bold text-primary mb-2">Irotori Baroka</h4>
+                            <p class="text-lg text-red-600 mb-4">Co-fondateur et CEO</p>
+                            <p class="text-gray-700 leading-relaxed">
+                                Expert en IA avec 10 ans d'expérience dans le domaine du Numérique,
+                                management d'entreprise et en Mentoring
+                            </p>
+                        </div>
+                        
+                        <div class="card-japanese p-8 text-center">
+                            <img src="./assets/david-kpondehou.jpg" alt="David Kpondehou"
+                                class="w-48 h-48 rounded-full mx-auto mb-6 object-cover shadow-lg">
+                            <h4 class="text-2xl font-bold text-primary mb-2">David Kpondehou</h4>
+                            <p class="text-lg text-red-600 mb-4">Co-fondateur</p>
+                            <p class="text-gray-700 leading-relaxed">
+                                Spécialiste en développement d'affaires internationales et
+                                Président de la Diaspora Africaine au Japon
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Notre Histoire Section -->
-    <section id="history" class="py-20 bg-gray-100">
+    <section id="history" class="section-japanese bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-5xl md:text-7xl font-bold text-center mb-16 text-primary" data-aos="fade-up">Notre Histoire
+            <h2 class="text-5xl md:text-7xl font-bold text-center mb-16 text-primary" >Notre Histoire
             </h2>
-            <div class="relative" data-aos="fade-up">
+            <div class="relative timeline-modern" >
                 <!-- Timeline -->
-                <div class="absolute h-full w-1 bg-primary left-1/2 transform -translate-x-1/2"></div>
 
                 <!-- Timeline items -->
                 <div class="space-y-20">
                     <!-- 2018 -->
-                    <div class="relative">
-                        <div
-                            class="absolute w-6 h-6 bg-primary rounded-full left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <div class="relative timeline-item">
+                        <div class="timeline-dot">
                         </div>
                         <div class="flex items-center justify-end md:justify-start md:ml-[calc(50%+2rem)] md:w-1/2">
-                            <div class="bg-white p-8 rounded-2xl shadow-lg">
+                            <div class="card-japanese p-8">
                                 <h3 class="text-3xl font-bold mb-4 text-primary">2018 - La Naissance</h3>
                                 <p class="text-xl text-primary">Fondation d'Africa Samurai Consulting par Irotori Baroka
                                     et David Kpondehou, avec la vision de connecter l'Afrique au monde à travers la
@@ -211,12 +266,11 @@
                     </div>
 
                     <!-- 2019-2020 -->
-                    <div class="relative">
-                        <div
-                            class="absolute w-6 h-6 bg-primary rounded-full left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <div class="relative timeline-item">
+                        <div class="timeline-dot">
                         </div>
                         <div class="flex items-center justify-start md:justify-end md:mr-[calc(50%+2rem)] md:w-1/2">
-                            <div class="bg-white p-8 rounded-2xl shadow-lg">
+                            <div class="card-japanese p-8">
                                 <h3 class="text-3xl font-bold mb-4 text-primary">2019-2020 - Le Premier Grand Projet
                                 </h3>
                                 <p class="text-xl text-primary">Collaboration majeure avec la JICA et le gouvernement
@@ -229,12 +283,11 @@
                     </div>
 
                     <!-- 2021-2023 -->
-                    <div class="relative">
-                        <div
-                            class="absolute w-6 h-6 bg-primary rounded-full left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <div class="relative timeline-item">
+                        <div class="timeline-dot">
                         </div>
                         <div class="flex items-center justify-end md:justify-start md:ml-[calc(50%+2rem)] md:w-1/2">
-                            <div class="bg-white p-8 rounded-2xl shadow-lg">
+                            <div class="card-japanese p-8">
                                 <h3 class="text-3xl font-bold mb-4 text-primary">2021-2023 - L'Expansion</h3>
                                 <p class="text-xl text-primary">Lancement de programmes de renforcement de capacités,
                                     bourses d'études en IA et ingénierie web, et organisation d'événements d'innovation
@@ -246,12 +299,11 @@
                     </div>
 
                     <!-- 2023 -->
-                    <div class="relative">
-                        <div
-                            class="absolute w-6 h-6 bg-primary rounded-full left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <div class="relative timeline-item">
+                        <div class="timeline-dot">
                         </div>
                         <div class="flex items-center justify-start md:justify-end md:mr-[calc(50%+2rem)] md:w-1/2">
-                            <div class="bg-white p-8 rounded-2xl shadow-lg">
+                            <div class="card-japanese p-8">
                                 <h3 class="text-3xl font-bold mb-4 text-primary">2023 - L'Année Charnière</h3>
                                 <p class="text-xl text-primary mb-4">Organisation de la conférence internationale sur la
                                     cybersécurité avec Carnegie Mellon University et lancement du projet AOTS, formant
@@ -263,12 +315,11 @@
                     </div>
 
                     <!-- 2024 -->
-                    <div class="relative">
-                        <div
-                            class="absolute w-6 h-6 bg-primary rounded-full left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <div class="relative timeline-item">
+                        <div class="timeline-dot">
                         </div>
                         <div class="flex items-center justify-end md:justify-start md:ml-[calc(50%+2rem)] md:w-1/2">
-                            <div class="bg-white p-8 rounded-2xl shadow-lg">
+                            <div class="card-japanese p-8">
                                 <h3 class="text-3xl font-bold mb-4 text-primary">2024 - L'Innovation Continue</h3>
                                 <p class="text-xl text-primary mb-4">
                                     Projet AOTS : Formation de 64 jeunes en IA et ingénierie web, en partenariat avec
@@ -304,22 +355,22 @@
     </section>
 
     <!-- Impact Section -->
-    <section id="impact" class="py-20 bg-gray-100">
+    <section id="impact" class="section-japanese bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-5xl md:text-7xl font-bold text-center mb-16 text-primary" data-aos="fade-up">Notre Impact en
+            <h2 class="text-5xl md:text-7xl font-bold text-center mb-16 text-primary" >Notre Impact en
                 Chiffres</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="bg-white rounded-lg shadow-lg p-8 text-center" data-aos="fade-up">
+                <div class="card-japanese p-8 text-center" >
                     <i data-lucide="trending-up" class="w-16 h-16 mx-auto mb-4 text-primary"></i>
                     <h3 class="text-3xl font-bold mb-2 text-primary">+80%</h3>
                     <p class="text-xl text-primary">Augmentation de l'employabilité des participants</p>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white rounded-lg shadow-lg p-8 text-center"  >
                     <i data-lucide="briefcase" class="w-16 h-16 mx-auto mb-4 text-primary"></i>
                     <h3 class="text-3xl font-bold mb-2 text-primary">150+</h3>
                     <p class="text-xl text-primary">Startups locales créées</p>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white rounded-lg shadow-lg p-8 text-center"  >
                     <i data-lucide="award" class="w-16 h-16 mx-auto mb-4 text-primary"></i>
                     <h3 class="text-3xl font-bold mb-2 text-primary">100+</h3>
                     <p class="text-xl text-primary">Opportunité de Bourses d'études au Japon offerte au Jeune de notre
@@ -327,13 +378,13 @@
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8">
-                <div class="bg-white rounded-lg shadow-lg p-8 text-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-white rounded-lg shadow-lg p-8 text-center"  >
                     <i data-lucide="dollar-sign" class="w-16 h-16 mx-auto mb-4 text-primary"></i>
                     <h3 class="text-3xl font-bold mb-2 text-primary">100M+</h3>
                     <p class="text-xl text-primary">FCFA collectés et investis en formation, bourse d'etudes et
                         conferences</p>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-8 text-center" data-aos="fade-up" data-aos-delay="400">
+                <div class="bg-white rounded-lg shadow-lg p-8 text-center"  >
                     <i data-lucide="globe" class="w-16 h-16 mx-auto mb-4 text-primary"></i>
                     <h3 class="text-3xl font-bold mb-2 text-primary">20+ Africains</h3>
                     <p class="text-xl text-primary">Bénéficiaires de nos programmes de bourses</p>
@@ -349,33 +400,33 @@
     </section>
 
     <!-- Nos Partenaires Section -->
-    <section id="partners" class="py-20 bg-gray-100">
+    <section id="partners" class="section-japanese bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-5xl md:text-7xl font-bold text-center mb-16 text-primary" data-aos="fade-up">Nos Partenaires
+            <h2 class="text-5xl md:text-7xl font-bold text-center mb-16 text-primary" >Nos Partenaires
             </h2>
             <div class="flex flex-wrap justify-center items-center gap-8 max-w-4xl mx-auto">
-                <div class="bg-white p-6 rounded-2xl shadow-lg" data-aos="fade-up">
+                <div class="card-japanese p-6" >
                     <img src="./assets/dpro-logo.png" alt="Dpro (Japon)" class="h-16 object-contain">
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white p-6 rounded-2xl shadow-lg"  >
                     <img src="./assets/jica-logo.png" alt="JICA" class="h-16 object-contain">
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white p-6 rounded-2xl shadow-lg"  >
                     <img src="./assets/aots-logo.png" alt="AOTS" class="h-16 object-contain">
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-white p-6 rounded-2xl shadow-lg"  >
                     <img src="./assets/cmu-logo.png" alt="Carnegie Mellon University" class="h-16 object-contain">
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                <div class="bg-white p-6 rounded-2xl shadow-lg"  >
                     <img src="./assets/adnj-logo.png" alt="ADNJ" class="h-16 object-contain">
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="500">
+                <div class="bg-white p-6 rounded-2xl shadow-lg"  >
                     <img src="./assets/yali-logo.png" alt="YALI" class="h-16 object-contain">
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="600">
+                <div class="bg-white p-6 rounded-2xl shadow-lg"  >
                     <img src="./assets/insti-logo.png" alt="Université INSTI" class="h-16 object-contain">
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="700">
+                <div class="bg-white p-6 rounded-2xl shadow-lg"  >
                     <img src="./assets/epac-logo.png" alt="EPAC Benin" class="h-16 object-contain">
                 </div>
             </div>
@@ -386,12 +437,12 @@
     <!-- Nos Prochains Événements Section -->
     <section id="events" class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-5xl md:text-7xl font-bold text-center mb-16 text-primary" data-aos="fade-up">Prochains
+            <h2 class="text-5xl md:text-7xl font-bold text-center mb-16 text-primary" >Prochains
                 Événements</h2>
-            <p class="text-2xl text-center mb-12 text-primary" data-aos="fade-up">Nous participons aux événements
+            <p class="text-2xl text-center mb-12 text-primary" >Nous participons aux événements
                 internationaux majeurs :</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                <div class="bg-gray-100 rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up">
+                <div class="bg-gray-100 rounded-2xl shadow-lg overflow-hidden" >
                     <img src="./assets/osaka-forum.jpg" alt="Osaka Africa Business Forum"
                         class="w-full h-64 object-cover">
                     <div class="p-8">
@@ -410,7 +461,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-gray-100 rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-gray-100 rounded-2xl shadow-lg overflow-hidden"  >
                     <img src="./assets/yali-expo.jpg" alt="YALI ALUMNI EXPO AND TRADE SHOW"
                         class="w-full h-64 object-cover">
                     <div class="p-8">
@@ -434,13 +485,13 @@
     </section>
 
     <!-- Section Objectifs Futurs -->
-    <section id="objectifs-futurs" class="py-20 bg-gray-100">
+    <section id="objectifs-futurs" class="section-japanese bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center mb-12">
-                <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
+                <div class="md:w-1/2 mb-8 md:mb-0" >
                     <img src="./assets/vision-future.jpg" alt="Vision pour l'avenir" class="rounded-2xl w-full h-auto">
                 </div>
-                <div class="md:w-1/2 md:pl-8" data-aos="fade-left">
+                <div class="md:w-1/2 md:pl-8" >
                     <h2 class="text-4xl md:text-6xl font-bold text-primary mb-6">Notre Vision Audacieuse pour l'Afrique
                         de Demain</h2>
                     <p class="text-xl">Nous nous engageons à façonner un avenir brillant et innovant pour le continent
@@ -448,7 +499,7 @@
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                <div class="bg-white p-8 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-japanese p-8"  >
                     <h3 class="text-3xl font-bold mb-6 text-primary">Catalyseur d'Innovation</h3>
                     <p class="text-xl mb-4">Nous aspirons à transformer le paysage africain en :</p>
                     <ul class="text-lg list-disc list-inside space-y-2">
@@ -457,7 +508,7 @@
                         <li>Propulsant le transfert de technologies dans les secteurs stratégiques</li>
                     </ul>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white p-8 rounded-2xl shadow-lg"  >
                     <h3 class="text-3xl font-bold mb-6 text-primary">Architecte de Collaborations</h3>
                     <p class="text-xl mb-4">Notre mission audacieuse vise à :</p>
                     <ul class="text-lg list-disc list-inside space-y-2">
@@ -467,7 +518,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="mt-12 text-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="mt-12 text-center"  >
                 <p class="text-2xl text-primary mb-8">Ensemble, façonnons un avenir radieux pour l'Afrique... Embarquez
                     dans cette aventure extraordinaire</p>
                 <a href="#contact"
@@ -479,29 +530,29 @@
     <!-- Section Témoignages -->
     <section id="testimonials" class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl md:text-6xl font-bold text-center mb-12 text-primary" data-aos="fade-up">Témoignages</h2>
+            <h2 class="text-4xl md:text-6xl font-bold text-center mb-12 text-primary" >Témoignages</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-japanese p-6 transform hover:scale-105 transition duration-300"  >
                     <h3 class="text-2xl font-bold text-primary mb-2">Aminata Diallo</h3>
                     <p class="text-lg text-gray-700 italic">"Grâce à la formation en IA d'Africa Samurai, j'ai décroché un poste de data scientist à Dakar."</p>
                 </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"  >
                     <h3 class="text-2xl font-bold text-primary mb-2">Kofi Mensah</h3>
                     <p class="text-lg text-gray-700 italic">"La bourse d'études m'a permis d'étudier l'ingénierie robotique au Japon. Aujourd'hui, je dirige ma start-up à Accra."</p>
                 </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"  >
                     <h3 class="text-2xl font-bold text-primary mb-2">Fatou Ndiaye</h3>
                     <p class="text-lg text-gray-700 italic">"Le programme de mentorat m'a guidée dans ma carrière en cybersécurité. J'ai un poste de responsable IT à Abidjan."</p>
                 </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300" data-aos="fade-up" data-aos-delay="400">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"  >
                     <h3 class="text-2xl font-bold text-primary mb-2">Yannick Kamga</h3>
                     <p class="text-lg text-gray-700 italic">"Le bootcamp en développement web a été le tremplin de ma carrière. Je suis maintenant développeur full-stack."</p>
                 </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300" data-aos="fade-up" data-aos-delay="500">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"  >
                     <h3 class="text-2xl font-bold text-primary mb-2">Aisha Mohammed</h3>
                     <p class="text-lg text-gray-700 italic">"J'ai participé à un échange culturel au Japon, ce qui m'a aidée à décrocher un emploi dans une multinationale."</p>
                 </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300" data-aos="fade-up" data-aos-delay="600">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"  >
                     <h3 class="text-2xl font-bold text-primary mb-2">Ousmane Sow</h3>
                     <p class="text-lg text-gray-700 italic">"Le programme d'entrepreneuriat m'a donné les outils pour lancer ma start-up dans l'agritech."</p>
                 </div>
@@ -511,45 +562,52 @@
 
      <!-- Nouveau Footer -->
      <footer class="bg-white py-16">
-        <div class="container mx-auto px-4">
-            <h1 class="text-8xl font-light text-gray-200 mb-8">Africa Samurai !<span
-                class="inline-block w-4 h-4 bg-white rounded-full ml-3"></span></h1>
-            <div class="flex flex-wrap justify-between">
-                <div class="w-full md:w-1/4 mb-8 md:mb-0">
-                    <svg class="w-10 h-10 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M19 6.94L12.06 0L5.12 6.94C3.02 9.04 3.02 12.52 5.12 14.62L12.06 21.56L19 14.62C21.1 12.52 21.1 9.04 19 6.94ZM12.06 15.5C10.23 15.5 8.74 14.01 8.74 12.18C8.74 10.35 10.23 8.86 12.06 8.86C13.89 8.86 15.38 10.35 15.38 12.18C15.38 14.01 13.89 15.5 12.06 15.5Z"
-                            fill="currentColor" />
-                    </svg>
-                    <p class="text-gray-500 text-sm">
-                        © 2024 Africa Samurai<br>
-                        Tous droits réservés.
-                    </p>
-                </div>
-                <div class="w-full md:w-1/4 mb-8 md:mb-0">
-                    <h3 class="text-gray-600 font-light mb-4">Projects</h3>
-                    <ul class="space-y-2">
-                        <li><a href="https://decision-io.vercel.app/startup" class="text-gray-500 hover:text-gray-700">Decision</a></li>
-                        <li><a href="https://bootcamp.africasamurai.com/" class="text-gray-500 hover:text-gray-700">Ai Boost</a></li>
-                        <li><a href="https://exchange.africasamurai.com/" class="text-gray-500 hover:text-gray-700">Exchange Samurai</a></li>
-                    </ul>
-                </div>
-                <div class="w-full md:w-1/4">
-                    <h3 class="text-gray-600 font-light mb-4">Réseaux</h3>
-                    <ul class="space-y-2">
-                        <!-- <li><a href="#" class="text-gray-500 hover:text-gray-700">Twitter</a></li> -->
-                        <li><a href="https://www.linkedin.com/company/africa-samurai-consulting" class="text-gray-500 hover:text-gray-700">LinkedIn</a></li>
-                        <li><a href="https://www.facebook.com/AfricaSamurai" class="text-gray-500 hover:text-gray-700">Facebook</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+         <div class="container mx-auto px-4">
+             <h1 class="text-8xl font-light text-gray-200 mb-8">Africa Samurai !<span
+                 class="inline-block w-4 h-4 bg-white rounded-full ml-3"></span></h1>
+             <div class="flex flex-wrap justify-between">
+                 <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                     <svg class="w-10 h-10 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <path
+                             d="M19 6.94L12.06 0L5.12 6.94C3.02 9.04 3.02 12.52 5.12 14.62L12.06 21.56L19 14.62C21.1 12.52 21.1 9.04 19 6.94ZM12.06 15.5C10.23 15.5 8.74 14.01 8.74 12.18C8.74 10.35 10.23 8.86 12.06 8.86C13.89 8.86 15.38 10.35 15.38 12.18C15.38 14.01 13.89 15.5 12.06 15.5Z"
+                             fill="currentColor" />
+                     </svg>
+                     <p class="text-gray-500 text-sm">
+                         © 2024 Africa Samurai<br>
+                         Tous droits réservés.
+                     </p>
+                 </div>
+                 <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                     <h3 class="text-gray-600 font-light mb-4">Projects</h3>
+                     <ul class="space-y-2">
+                         <li><a href="https://decision-io.vercel.app/startup" class="text-gray-500 hover:text-gray-700">Decision</a></li>
+                         <li><a href="https://bootcamp.africasamurai.com/" class="text-gray-500 hover:text-gray-700">Ai Boost</a></li>
+                         <li><a href="https://exchange.africasamurai.com/" class="text-gray-500 hover:text-gray-700">Exchange Samurai</a></li>
+                     </ul>
+                 </div>
+                 <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                     <h3 class="text-gray-600 font-light mb-4">Légal</h3>
+                     <ul class="space-y-2">
+                         <li><a href="privacy-policy.html" class="text-gray-500 hover:text-gray-700">Politique de confidentialité</a></li>
+                         <li><a href="gdpr-policy.html" class="text-gray-500 hover:text-gray-700">Politique RGPD</a></li>
+                         <li><a href="terms-of-service.html" class="text-gray-500 hover:text-gray-700">Conditions de service</a></li>
+                     </ul>
+                 </div>
+                 <div class="w-full md:w-1/4">
+                     <h3 class="text-gray-600 font-light mb-4">Réseaux</h3>
+                     <ul class="space-y-2">
+                         <!-- <li><a href="#" class="text-gray-500 hover:text-gray-700">Twitter</a></li> -->
+                         <li><a href="https://www.linkedin.com/company/africa-samurai-consulting" class="text-gray-500 hover:text-gray-700">LinkedIn</a></li>
+                         <li><a href="https://www.facebook.com/AfricaSamurai" class="text-gray-500 hover:text-gray-700">Facebook</a></li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </footer>
 
     <script src="script.js"></script>
     <script>
         lucide.createIcons();
-        AOS.init();
 
         document.addEventListener('DOMContentLoaded', () => {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
