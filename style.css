@@ -29,6 +29,8 @@ html {
 
 body {
   position: relative;
+  --network-x: 0px;
+  --network-y: 0px;
   margin: 0;
   color: var(--ink);
   background: var(--paper);
@@ -41,15 +43,18 @@ body {
 
 body::before {
   content: "";
-  position: absolute;
+  position: fixed;
   z-index: 0;
-  inset: 0;
+  inset: -10vh -6vw;
   background-image: url("./assets/world-connections.svg");
-  background-position: center 70px;
-  background-repeat: repeat-y;
-  background-size: 1500px 880px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: min(1650px, 132vw) auto;
   opacity: .72;
   pointer-events: none;
+  transform: translate3d(var(--network-x), var(--network-y), 0) scale(1.08);
+  transform-origin: center;
+  will-change: transform;
 }
 
 body > header,
@@ -1519,8 +1524,8 @@ button:focus-visible {
   }
 
   body::before {
-    background-position: 42% 70px;
-    background-size: 980px 575px;
+    background-position: center;
+    background-size: 1050px auto;
     opacity: .58;
   }
 

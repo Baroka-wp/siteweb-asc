@@ -89,6 +89,13 @@ function updateOnScroll() {
   header.classList.toggle("is-scrolled", window.scrollY > 36);
 
   if (reduceMotion.matches) return;
+  const scrollRange = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+  const scrollProgress = Math.min(Math.max(window.scrollY / scrollRange, 0), 1);
+  const networkY = (0.5 - scrollProgress) * 140;
+  const networkX = (scrollProgress - 0.5) * 36;
+  document.body.style.setProperty("--network-y", `${networkY.toFixed(2)}px`);
+  document.body.style.setProperty("--network-x", `${networkX.toFixed(2)}px`);
+
   document.querySelectorAll("[data-parallax]").forEach((container) => {
     const rect = container.getBoundingClientRect();
     if (rect.bottom < 0 || rect.top > window.innerHeight) return;
