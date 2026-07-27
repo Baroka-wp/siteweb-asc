@@ -54,6 +54,43 @@
 
   <main id="main">
     <section class="hero">
+      <div class="world-network" aria-hidden="true">
+        <svg viewBox="0 0 1200 700" role="presentation">
+          <g class="network-grid">
+            <path d="M70 170H1130M70 350H1130M70 530H1130"/>
+            <path d="M250 70V630M520 70V630M790 70V630M1060 70V630"/>
+          </g>
+          <g class="network-land">
+            <path d="M438 247l-44 28-24 56 18 48 31 20 16 71 45 91 36 8 24-42 13-73 47-77-16-62-52-35-34-42z"/>
+            <path d="M432 183l20-39 47-12 32 18 23-15 43 21 18 34-29 24-59-3-33 34-39-14z"/>
+            <path d="M586 157l56-37 97 4 64 28 76-6 76 30 74 3 62 41-15 37-69 4-48 43-85 9-62-33-73 13-48-27-60-8-43-39z"/>
+            <path d="M1009 273l22-11 24 14-7 25-28 7-18-17z"/>
+          </g>
+          <g class="network-routes">
+            <path class="network-route network-route--one" d="M444 365Q442 228 500 185"/>
+            <path class="network-route network-route--two" d="M444 365Q694 105 1023 286"/>
+            <path class="network-route network-route--three" d="M444 365Q686 360 825 277"/>
+          </g>
+          <g class="network-nodes">
+            <circle class="network-origin" cx="444" cy="365" r="7"/>
+            <circle cx="500" cy="185" r="4"/>
+            <circle cx="825" cy="277" r="4"/>
+            <circle cx="1023" cy="286" r="4"/>
+          </g>
+          <g class="network-labels">
+            <text x="422" y="393">BENIN</text>
+            <text x="466" y="166">EUROPE</text>
+            <text x="799" y="259">ASIA</text>
+            <text x="1036" y="291">JAPAN</text>
+          </g>
+          <circle class="network-traveller" r="3">
+            <animateMotion dur="8s" repeatCount="indefinite" path="M444 365Q442 228 500 185"/>
+          </circle>
+          <circle class="network-traveller network-traveller--delay" r="3">
+            <animateMotion dur="12s" begin="-4s" repeatCount="indefinite" path="M444 365Q694 105 1023 286"/>
+          </circle>
+        </svg>
+      </div>
       <div class="hero-grid">
         <div class="hero-copy reveal">
           <p class="eyebrow" data-copy-fr="Éducation technologique · Afrique" data-copy-en="Technology education · Africa">Éducation technologique · Afrique</p>

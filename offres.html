@@ -54,6 +54,43 @@
 
   <main id="main">
     <section class="offers-hero section-shell">
+      <div class="world-network world-network--offers" aria-hidden="true">
+        <svg viewBox="0 0 1200 700" role="presentation">
+          <g class="network-grid">
+            <path d="M70 170H1130M70 350H1130M70 530H1130"/>
+            <path d="M250 70V630M520 70V630M790 70V630M1060 70V630"/>
+          </g>
+          <g class="network-land">
+            <path d="M438 247l-44 28-24 56 18 48 31 20 16 71 45 91 36 8 24-42 13-73 47-77-16-62-52-35-34-42z"/>
+            <path d="M432 183l20-39 47-12 32 18 23-15 43 21 18 34-29 24-59-3-33 34-39-14z"/>
+            <path d="M586 157l56-37 97 4 64 28 76-6 76 30 74 3 62 41-15 37-69 4-48 43-85 9-62-33-73 13-48-27-60-8-43-39z"/>
+            <path d="M1009 273l22-11 24 14-7 25-28 7-18-17z"/>
+          </g>
+          <g class="network-routes">
+            <path class="network-route network-route--one" d="M444 365Q442 228 500 185"/>
+            <path class="network-route network-route--two" d="M444 365Q694 105 1023 286"/>
+            <path class="network-route network-route--three" d="M444 365Q686 360 825 277"/>
+          </g>
+          <g class="network-nodes">
+            <circle class="network-origin" cx="444" cy="365" r="7"/>
+            <circle cx="500" cy="185" r="4"/>
+            <circle cx="825" cy="277" r="4"/>
+            <circle cx="1023" cy="286" r="4"/>
+          </g>
+          <g class="network-labels">
+            <text x="422" y="393">BENIN</text>
+            <text x="466" y="166">EUROPE</text>
+            <text x="799" y="259">ASIA</text>
+            <text x="1036" y="291">JAPAN</text>
+          </g>
+          <circle class="network-traveller" r="3">
+            <animateMotion dur="8s" repeatCount="indefinite" path="M444 365Q442 228 500 185"/>
+          </circle>
+          <circle class="network-traveller network-traveller--delay" r="3">
+            <animateMotion dur="12s" begin="-4s" repeatCount="indefinite" path="M444 365Q694 105 1023 286"/>
+          </circle>
+        </svg>
+      </div>
       <div class="offers-intro reveal">
         <p class="eyebrow" data-copy-fr="Nos modèles d’intervention" data-copy-en="Our delivery models">Nos modèles d’intervention</p>
         <h1 data-copy-fr="Deux portes d’entrée. Une même exigence d’impact." data-copy-en="Two ways in. One standard of impact.">Deux portes d’entrée. Une même exigence d’impact.</h1>
@@ -63,12 +100,12 @@
       </div>
 
       <div class="model-selector reveal" data-delay="120">
-        <a class="model-choice model-choice--b2b2c" href="#b2b2c">
+        <a class="model-choice model-choice--b2b2c" href="./b2b2c.html">
           <span>B2B2C</span>
           <strong data-copy-fr="Développer les compétences d’un public" data-copy-en="Build the capabilities of an audience">Développer les compétences d’un public</strong>
           <small data-copy-fr="Entreprises · Écoles · Organisations" data-copy-en="Companies · Schools · Organisations">Entreprises · Écoles · Organisations</small>
         </a>
-        <a class="model-choice model-choice--b2g" href="#b2g">
+        <a class="model-choice model-choice--b2g" href="./b2g.html">
           <span>B2G</span>
           <strong data-copy-fr="Concevoir et déployer une politique publique" data-copy-en="Design and deliver a public programme">Concevoir et déployer une politique publique</strong>
           <small data-copy-fr="Ministères · Agences · Institutions" data-copy-en="Ministries · Agencies · Institutions">Ministères · Agences · Institutions</small>
@@ -76,173 +113,6 @@
       </div>
     </section>
 
-    <section class="model-section model-section--b2b2c" id="b2b2c">
-      <div class="section-shell">
-        <div class="model-header">
-          <div class="model-code reveal">B2B2C</div>
-          <div class="model-title reveal" data-delay="80">
-            <p class="eyebrow" data-copy-fr="Programmes pour collaborateurs et bénéficiaires" data-copy-en="Programmes for employees and beneficiaries">Programmes pour collaborateurs et bénéficiaires</p>
-            <h2 data-copy-fr="Vous ouvrez l’accès. Nous transformons l’apprentissage en capacité utile." data-copy-en="You open access. We turn learning into useful capability.">
-              Vous ouvrez l’accès. Nous transformons l’apprentissage en capacité utile.
-            </h2>
-          </div>
-          <div class="model-explanation reveal" data-delay="160">
-            <p data-copy-fr="L’entreprise, l’école ou l’organisation constitue et finance une cohorte. Africa Samurai adapte le parcours, anime les sessions et mesure la progression des participants." data-copy-en="The company, school or organisation forms and funds a cohort. Africa Samurai adapts the pathway, delivers the sessions and measures participant progress.">
-              L’entreprise, l’école ou l’organisation constitue et finance une cohorte. Africa Samurai adapte le parcours, anime les sessions et mesure la progression des participants.
-            </p>
-          </div>
-        </div>
-
-        <div class="flagship-programmes">
-          <article class="programme programme--ia reveal">
-            <div class="programme-topline">
-              <span data-copy-fr="Offre phare / Compétences IA" data-copy-en="Flagship / AI capabilities">Offre phare / Compétences IA</span>
-              <span data-copy-fr="Présentiel ou en ligne" data-copy-en="In person or online">Présentiel ou en ligne</span>
-            </div>
-            <div class="programme-body">
-              <div>
-                <h3 data-copy-fr="L’intelligence artificielle pour tous" data-copy-en="Artificial intelligence for everyone">L’intelligence artificielle pour tous</h3>
-                <p data-copy-fr="Un parcours sans jargon pour aider les professionnels non techniques à intégrer l’IA dans leurs activités : recherche, rédaction, création de contenu, organisation et automatisation des tâches courantes." data-copy-en="A jargon-free pathway helping non-technical professionals integrate AI into their work: research, writing, content creation, organisation and everyday task automation.">
-                  Un parcours sans jargon pour aider les professionnels non techniques à intégrer l’IA dans leurs activités : recherche, rédaction, création de contenu, organisation et automatisation des tâches courantes.
-                </p>
-              </div>
-              <dl class="programme-facts">
-                <div>
-                  <dt data-copy-fr="Public" data-copy-en="Audience">Public</dt>
-                  <dd data-copy-fr="Professionnels non techniques, entrepreneurs, équipes support" data-copy-en="Non-technical professionals, entrepreneurs, support teams">Professionnels non techniques, entrepreneurs, équipes support</dd>
-                </div>
-                <div>
-                  <dt data-copy-fr="Format" data-copy-en="Format">Format</dt>
-                  <dd data-copy-fr="Cohorte de 15 personnes maximum" data-copy-en="Cohorts of up to 15 participants">Cohorte de 15 personnes maximum</dd>
-                </div>
-                <div>
-                  <dt data-copy-fr="Résultat attendu" data-copy-en="Expected outcome">Résultat attendu</dt>
-                  <dd data-copy-fr="Des usages IA concrets intégrés au travail quotidien" data-copy-en="Practical AI use cases embedded in daily work">Des usages IA concrets intégrés au travail quotidien</dd>
-                </div>
-              </dl>
-            </div>
-            <a class="programme-link" href="https://page.laforge-hub.com/ia-pour-tous" target="_blank" rel="noopener" data-copy-fr="Voir la page du programme" data-copy-en="View programme page">Voir la page du programme</a>
-          </article>
-
-          <article class="programme programme--pmp reveal">
-            <div class="programme-topline">
-              <span data-copy-fr="Offre phare / Compétences transversales" data-copy-en="Flagship / Cross-functional skills">Offre phare / Compétences transversales</span>
-              <span data-copy-fr="Accompagnement structuré" data-copy-en="Structured support">Accompagnement structuré</span>
-            </div>
-            <div class="programme-body">
-              <div>
-                <h3>PMP Ready</h3>
-                <p data-copy-fr="Un accompagnement destiné aux chefs de projet et aux profils techniques — développeurs, ingénieurs, data, cloud ou cyber — qui veulent structurer leur évolution vers le pilotage à l’ère de l’IA." data-copy-en="Support for project managers and technical profiles — developers, engineers, data, cloud or cyber specialists — seeking to structure their transition into leadership in the AI era.">
-                  Un accompagnement destiné aux chefs de projet et aux profils techniques — développeurs, ingénieurs, data, cloud ou cyber — qui veulent structurer leur évolution vers le pilotage à l’ère de l’IA.
-                </p>
-              </div>
-              <dl class="programme-facts">
-                <div>
-                  <dt data-copy-fr="Parcours" data-copy-en="Pathway">Parcours</dt>
-                  <dd data-copy-fr="Diagnostic, plan personnel, deux séances et 14 jours de suivi" data-copy-en="Assessment, personal plan, two sessions and 14 days of follow-up">Diagnostic, plan personnel, deux séances et 14 jours de suivi</dd>
-                </div>
-                <div>
-                  <dt data-copy-fr="Compétences" data-copy-en="Capabilities">Compétences</dt>
-                  <dd data-copy-fr="Priorités, risques, délais, parties prenantes et équipes hybrides" data-copy-en="Priorities, risks, timelines, stakeholders and hybrid teams">Priorités, risques, délais, parties prenantes et équipes hybrides</dd>
-                </div>
-                <div>
-                  <dt data-copy-fr="Résultat attendu" data-copy-en="Expected outcome">Résultat attendu</dt>
-                  <dd data-copy-fr="Un plan de préparation et d’évolution professionnelle réaliste" data-copy-en="A realistic preparation and career development plan">Un plan de préparation et d’évolution professionnelle réaliste</dd>
-                </div>
-              </dl>
-            </div>
-            <a class="programme-link" href="https://page.laforge-hub.com/pmp-ready" target="_blank" rel="noopener" data-copy-fr="Voir la page du programme" data-copy-en="View programme page">Voir la page du programme</a>
-            <p class="programme-disclaimer" data-copy-fr="PMP Ready est une préparation indépendante. L’examen et la certification PMP® sont délivrés exclusivement par PMI." data-copy-en="PMP Ready is an independent preparation programme. The PMP® exam and certification are delivered exclusively by PMI.">
-              PMP Ready est une préparation indépendante. L’examen et la certification PMP® sont délivrés exclusivement par PMI.
-            </p>
-          </article>
-        </div>
-
-        <div class="cohort-strip reveal">
-          <div>
-            <p class="eyebrow" data-copy-fr="Parcours sur mesure" data-copy-en="Tailored pathways">Parcours sur mesure</p>
-            <h3 data-copy-fr="Une cohorte, un besoin métier, un résultat mesurable." data-copy-en="One cohort, one business need, one measurable outcome.">Une cohorte, un besoin métier, un résultat mesurable.</h3>
-          </div>
-          <p data-copy-fr="Nous pouvons adapter les contenus, le rythme et les cas pratiques à un secteur, une équipe ou une communauté spécifique." data-copy-en="We can adapt content, pace and practical cases to a specific sector, team or community.">
-            Nous pouvons adapter les contenus, le rythme et les cas pratiques à un secteur, une équipe ou une communauté spécifique.
-          </p>
-          <button class="text-link calendly-trigger" type="button" data-copy-fr="Composer une cohorte" data-copy-en="Build a cohort">Composer une cohorte</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="model-section model-section--b2g" id="b2g">
-      <div class="section-shell">
-        <div class="model-header">
-          <div class="model-code reveal">B2G</div>
-          <div class="model-title reveal" data-delay="80">
-            <p class="eyebrow" data-copy-fr="Programmes publics & EdTech" data-copy-en="Public programmes & EdTech">Programmes publics & EdTech</p>
-            <h2 data-copy-fr="Du cadrage institutionnel au déploiement sur le terrain." data-copy-en="From institutional framing to field delivery.">Du cadrage institutionnel au déploiement sur le terrain.</h2>
-          </div>
-          <div class="model-explanation reveal" data-delay="160">
-            <p data-copy-fr="Africa Samurai aide les institutions publiques et leurs partenaires à transformer une ambition éducative ou numérique en programme pilotable, mesurable et adapté aux réalités locales." data-copy-en="Africa Samurai helps public institutions and their partners turn an education or digital ambition into a manageable, measurable programme adapted to local realities.">
-              Africa Samurai aide les institutions publiques et leurs partenaires à transformer une ambition éducative ou numérique en programme pilotable, mesurable et adapté aux réalités locales.
-            </p>
-          </div>
-        </div>
-
-        <div class="government-capabilities">
-          <article class="government-row reveal">
-            <span data-copy-fr="Concevoir" data-copy-en="Design">Concevoir</span>
-            <h3 data-copy-fr="Programmes nationaux ou sectoriels" data-copy-en="National or sector programmes">Programmes nationaux ou sectoriels</h3>
-            <p data-copy-fr="Diagnostic des besoins, architecture pédagogique, objectifs, budget, gouvernance et indicateurs de suivi." data-copy-en="Needs assessment, learning architecture, objectives, budget, governance and monitoring indicators.">
-              Diagnostic des besoins, architecture pédagogique, objectifs, budget, gouvernance et indicateurs de suivi.
-            </p>
-          </article>
-          <article class="government-row reveal">
-            <span data-copy-fr="Piloter" data-copy-en="Pilot">Piloter</span>
-            <h3 data-copy-fr="Expérimentations EdTech et IA hors-ligne" data-copy-en="EdTech and offline AI pilots">Expérimentations EdTech et IA hors-ligne</h3>
-            <p data-copy-fr="Déploiement de pilotes dans les établissements, formation des acteurs, assistance opérationnelle et collecte de données d’usage." data-copy-en="Deployment of school pilots, stakeholder training, operational support and usage data collection.">
-              Déploiement de pilotes dans les établissements, formation des acteurs, assistance opérationnelle et collecte de données d’usage.
-            </p>
-          </article>
-          <article class="government-row reveal">
-            <span data-copy-fr="Coordonner" data-copy-en="Coordinate">Coordonner</span>
-            <h3 data-copy-fr="Partenaires, ministères et opérateurs" data-copy-en="Partners, ministries and operators">Partenaires, ministères et opérateurs</h3>
-            <p data-copy-fr="Facilitation institutionnelle, mobilisation des parties prenantes et coordination locale des entreprises technologiques internationales." data-copy-en="Institutional facilitation, stakeholder mobilisation and local coordination of international technology companies.">
-              Facilitation institutionnelle, mobilisation des parties prenantes et coordination locale des entreprises technologiques internationales.
-            </p>
-          </article>
-          <article class="government-row reveal">
-            <span data-copy-fr="Étendre" data-copy-en="Scale">Étendre</span>
-            <h3 data-copy-fr="Mesure d’impact et passage à l’échelle" data-copy-en="Impact measurement and scale-up">Mesure d’impact et passage à l’échelle</h3>
-            <p data-copy-fr="Analyse des résultats, documentation des apprentissages et préparation d’un déploiement progressif, soutenable et sécurisé." data-copy-en="Results analysis, learning documentation and preparation for gradual, sustainable and secure deployment.">
-              Analyse des résultats, documentation des apprentissages et préparation d’un déploiement progressif, soutenable et sécurisé.
-            </p>
-          </article>
-        </div>
-
-        <div class="public-proof reveal">
-          <div class="public-proof-label">
-            <span data-copy-fr="Référence actuelle" data-copy-en="Current reference">Référence actuelle</span>
-            <strong>Sèmè City</strong>
-          </div>
-          <p data-copy-fr="Africa Samurai intervient sous contrat avec l’Agence de Développement de Sèmè City, Présidence de la République du Bénin, pour coordonner des programmes de formation en intelligence artificielle destinés aux élèves du secondaire." data-copy-en="Africa Samurai is contracted by the Sèmè City Development Agency, Presidency of the Republic of Benin, to coordinate artificial intelligence training programmes for secondary-school students.">
-            Africa Samurai intervient sous contrat avec l’Agence de Développement de Sèmè City, Présidence de la République du Bénin, pour coordonner des programmes de formation en intelligence artificielle destinés aux élèves du secondaire.
-          </p>
-          <div class="public-proof-meta">
-            <span data-copy-fr="Coordination de programme" data-copy-en="Programme coordination">Coordination de programme</span>
-            <span data-copy-fr="Formation IA" data-copy-en="AI training">Formation IA</span>
-            <span data-copy-fr="Éducation secondaire" data-copy-en="Secondary education">Éducation secondaire</span>
-          </div>
-        </div>
-
-        <div class="b2g-process reveal">
-          <p class="eyebrow" data-copy-fr="Notre méthode" data-copy-en="Our method">Notre méthode</p>
-          <ol>
-            <li><span>01</span><strong data-copy-fr="Cadrer" data-copy-en="Frame">Cadrer</strong></li>
-            <li><span>02</span><strong data-copy-fr="Piloter" data-copy-en="Pilot">Piloter</strong></li>
-            <li><span>03</span><strong data-copy-fr="Mesurer" data-copy-en="Measure">Mesurer</strong></li>
-            <li><span>04</span><strong data-copy-fr="Déployer" data-copy-en="Scale">Déployer</strong></li>
-          </ol>
-        </div>
-      </div>
-    </section>
 
     <section class="contact" id="contact">
       <div class="contact-inner section-shell reveal">
