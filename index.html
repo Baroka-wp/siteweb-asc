@@ -1,655 +1,288 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Africa Samurai Consulting : Votre partenaire stratégique pour le développement et l'innovation en Afrique. Expertise en technologie, formation et collaborations internationales.">
-    <title>Africa Samurai Consulting</title>
-    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'cormorant': ['"Cormorant Garamond"', 'serif'],
-                    },
-                    colors: {
-                        primary: '#004D6E',
-                        secondary: '#FFBE0B',
-                        white: '#FFFFFF',
-                    }
-                }
-            }
-        }
-    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Africa Samurai Consulting conçoit et coordonne des programmes d’éducation technologique et des collaborations institutionnelles entre l’Afrique et le monde.">
+  <meta name="theme-color" content="#f2eee7">
+  <title>Africa Samurai Consulting — Education, technologie, impact</title>
+  <link rel="icon" href="./assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 </head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
 
-<body class="bg-white font-cormorant text-primary">
-    <!-- Modal pour Calendly -->
-    <div id="calendly-modal" class="fixed inset-0 bg-white z-[9999] hidden">
-        <button id="close-modal" class="absolute top-4 right-4 text-3xl text-primary hover:text-secondary z-[10000]">
-            <i data-lucide="x"></i>
-        </button>
-        <iframe src="https://calendly.com/baroka/connecting-meeting" class="w-full h-full border-none"></iframe>
-    </div>
-    <nav class="top-0 left-0 right-0 nav-modern z-50 fixed">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <a href="#" class="flex items-center">
-                    <img src="./assets/africa-samurai-logo.png" alt="Africa Samurai Consulting Logo"
-                        class="h-12 w-auto">
-                </a>
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#about" class="text-primary hover:text-secondary transition duration-300">À Propos</a>
-                    <a href="#history" class="text-primary hover:text-secondary transition duration-300">Achievement</a>
-                    <a href="#partners"
-                        class="text-primary hover:text-secondary transition duration-300">Partenaires</a>
-                    <a href="#events" class="text-primary hover:text-secondary transition duration-300">Future</a>
-                    <a href="#"
-                        class="bg-secondary text-primary px-6 py-3 rounded-full hover:bg-primary hover:text-white transition duration-300 calendly-trigger">Prendre
-                        rendez-vous</a>
-                </div>
-                <button class="md:hidden text-primary focus:outline-none" id="mobile-menu-button" aria-label="Menu">
-                    <i data-lucide="menu" class="w-8 h-8"></i>
-                </button>
-            </div>
-        </div>
-        <!-- Menu mobile -->
-        <div id="mobile-menu"
-            class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-[1000]">
-            <div class="p-4">
-                <button class="text-primary focus:outline-none mb-4" id="close-mobile-menu">
-                    <i data-lucide="x" class="w-8 h-8"></i>
-                </button>
-                <ul class="space-y-4">
-                    <li><a href="#about" class="block text-primary hover:text-secondary transition duration-300">À
-                            Propos</a></li>
-                    <li><a href="#history"
-                            class="block text-primary hover:text-secondary transition duration-300">Achievement</a></li>
-                    <li><a href="#partners"
-                            class="block text-primary hover:text-secondary transition duration-300">Partenaires</a></li>
-                    <li><a href="#events"
-                            class="block text-primary hover:text-secondary transition duration-300">Future</a></li>
-                    <li><a href="#"
-                            class="block bg-secondary text-primary px-6 py-3 rounded-full hover:bg-primary hover:text-white transition duration-300 calendly-trigger">Prendre
-                            rendez-vous</a></li>
-                </ul>
-            </div>
-        </div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Africa Samurai Consulting, accueil">
+      <span class="brand-mark">
+        <img src="./assets/africa-samurai-logo.png" alt="">
+      </span>
+      <span class="brand-name">Africa Samurai<br>Consulting</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Navigation principale">
+      <a href="#expertise" data-copy-fr="Expertise" data-copy-en="Expertise">Expertise</a>
+      <a href="#impact" data-copy-fr="Impact" data-copy-en="Impact">Impact</a>
+      <a href="#japan" data-copy-fr="Afrique × Japon" data-copy-en="Africa × Japan">Afrique × Japon</a>
+      <a href="#contact" data-copy-fr="Contact" data-copy-en="Contact">Contact</a>
     </nav>
 
-    <!-- Overlay pour le menu mobile -->
-    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black opacity-50 z-[999] hidden md:hidden"></div>
-
-    <!-- Boutons de traduction flottants -->
-    <div class="fixed top-1/2 right-4 transform -translate-y-1/2 z-50 flex flex-col space-y-2">
-        <button id="fr-btn"
-            class="bg-primary text-white px-4 py-2 rounded-full hover:bg-secondary transition duration-300">FR</button>
-        <button id="en-btn"
-            class="bg-primary text-white px-4 py-2 rounded-full hover:bg-secondary transition duration-300">EN</button>
-        <button id="jp-btn"
-            class="bg-primary text-white px-4 py-2 rounded-full hover:bg-secondary transition duration-300">JP</button>
+    <div class="header-actions">
+      <div class="language-switch" aria-label="Langue">
+        <button type="button" class="language-button is-active" data-language="fr" aria-pressed="true">FR</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" class="language-button" data-language="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span>
+        <span class="sr-only">Ouvrir le menu</span>
+      </button>
     </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="min-h-screen flex items-center pt-20 relative" style="background-color:white;">
-        <!-- Overlay pour améliorer la lisibilité -->
-        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="flex flex-col md:flex-row items-center justify-between">
-                <div class="md:w-1/2 mb-8 md:mb-0" >
-                    <h1 class="text-6xl md:text-8xl font-bold mb-4 leading-tight text-white">Africa <span
-                            class="text-red-400">Samurai</span></h1>
-                    <h1 class="text-6xl md:text-8xl font-bold mb-4 text-white">Consulting</h1>
-                        <p class="text-2xl mb-8 text-white">Connecter l'Afrique au monde à travers une <strong
-                                class="font-bold text-red-400">éducation de
-                                qualité</strong> pour les jeunes et l'<strong class="font-bold text-red-400">innovation
-                                technologique</strong></p>
-                        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                            <a href="#about"
-                                class="btn-japanese text-center text-xl"
-                                onclick="event.preventDefault(); document.querySelector('#about').scrollIntoView({behavior: 'smooth'});">Qui
-                                sommes-nous</a>
-                        </div>
-                </div>
-                <div class="md:w-1/2" >
-                    <img src="./assets/africa-samurai-hero.png" alt="Africa Samurai Consulting Logo"
-                        class="rounded-lg w-full">
-                </div>
-            </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Navigation mobile" aria-hidden="true">
+    <a href="#expertise" data-copy-fr="Expertise" data-copy-en="Expertise">Expertise</a>
+    <a href="#impact" data-copy-fr="Impact" data-copy-en="Impact">Impact</a>
+    <a href="#japan" data-copy-fr="Afrique × Japon" data-copy-en="Africa × Japan">Afrique × Japon</a>
+    <a href="#contact" data-copy-fr="Contact" data-copy-en="Contact">Contact</a>
+  </nav>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow" data-copy-fr="Éducation technologique · Afrique" data-copy-en="Technology education · Africa">Éducation technologique · Afrique</p>
+          <h1>
+            <span data-copy-fr="Le capital humain," data-copy-en="Human capital,">Le capital humain,</span>
+            <em data-copy-fr="sans frontières." data-copy-en="without borders.">sans frontières.</em>
+          </h1>
+          <p class="hero-intro" data-copy-fr="Nous concevons les programmes, les partenariats et les environnements d’apprentissage qui rapprochent les talents africains des opportunités mondiales." data-copy-en="We design the programmes, partnerships and learning environments that connect African talent with global opportunity.">
+            Nous concevons les programmes, les partenariats et les environnements d’apprentissage qui rapprochent les talents africains des opportunités mondiales.
+          </p>
+          <div class="hero-actions">
+            <a class="text-link text-link--strong" href="#expertise" data-copy-fr="Découvrir notre expertise" data-copy-en="Explore our expertise">Découvrir notre expertise</a>
+            <button class="text-link calendly-trigger" type="button" data-copy-fr="Parler d’un projet" data-copy-en="Discuss a project">Parler d’un projet</button>
+          </div>
         </div>
+
+        <div class="hero-visual reveal" data-delay="120">
+          <div class="hero-photo" data-parallax="0.08">
+            <img src="./assets/irotori-baroka.jpg" alt="Irotori Baroka lors d’une rencontre professionnelle">
+          </div>
+          <div class="hero-caption">
+            <span>01</span>
+            <p data-copy-fr="Ancrés au Bénin. Connectés au Japon. Engagés pour l’Afrique." data-copy-en="Rooted in Benin. Connected to Japan. Committed to Africa.">Ancrés au Bénin. Connectés au Japon. Engagés pour l’Afrique.</p>
+          </div>
+          <div class="hero-stamp" aria-hidden="true">ASC / 2018</div>
+        </div>
+      </div>
+
+      <div class="hero-index" aria-label="Repères">
+        <span data-copy-fr="Depuis 2018" data-copy-en="Since 2018">Depuis 2018</span>
+        <span>Abomey-Calavi, Bénin</span>
+        <span data-copy-fr="Éducation × Technologie" data-copy-en="Education × Technology">Éducation × Technologie</span>
+        <span>Africa × Japan</span>
+      </div>
     </section>
 
-    <!-- À Propos Section -->
-    <section id="about" class="section-japanese bg-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-5xl md:text-7xl font-bold text-center mb-16 text-primary">Qui sommes-nous ?</h2>
-                
-                <!-- Introduction avec design moderne -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
-                    <div class="space-y-6">
-                        <div class="card-japanese p-8">
-                            <h3 class="text-3xl font-bold mb-6 text-primary">Notre Mission</h3>
-                            <p class="text-lg text-gray-700 leading-relaxed">
-                                Africa Samurai Consulting est une entreprise de conseil spécialisée dans le transfert de
-                                technologies, l'éducation et les échanges culturels entre l'Afrique et le monde, avec un accent
-                                particulier sur le Japon.
-                            </p>
-                        </div>
-                        
-                        <div class="card-japanese p-8">
-                            <h3 class="text-3xl font-bold mb-6 text-primary">Notre Vision</h3>
-                            <p class="text-lg text-gray-700 leading-relaxed">
-                                Fondée en 2018, notre entreprise s'est rapidement imposée comme un acteur clé dans le domaine de
-                                l'innovation technologique et des partenariats internationaux en Afrique.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="space-y-6">
-                        <div class="card-japanese p-8">
-                            <h3 class="text-3xl font-bold mb-6 text-primary">Nos Valeurs</h3>
-                            <ul class="space-y-4 text-lg text-gray-700">
-                                <li class="flex items-start">
-                                    <span class="text-red-600 text-2xl mr-3">•</span>
-                                    <span>Excellence dans l'éducation technologique</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-red-600 text-2xl mr-3">•</span>
-                                    <span>Innovation et créativité</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-red-600 text-2xl mr-3">•</span>
-                                    <span>Collaboration internationale</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-red-600 text-2xl mr-3">•</span>
-                                    <span>Développement durable</span>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <div class="card-japanese p-8">
-                            <h3 class="text-3xl font-bold mb-6 text-primary">Notre Impact</h3>
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="text-center">
-                                    <div class="text-3xl font-bold text-red-600">150+</div>
-                                    <div class="text-sm text-gray-600">Startups créées</div>
-                                </div>
-                                <div class="text-center">
-                                    <div class="text-3xl font-bold text-red-600">100+</div>
-                                    <div class="text-sm text-gray-600">Bourses offertes</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Vidéo YouTube avec design amélioré -->
-                <div class="max-w-4xl mx-auto mb-20">
-                    <div class="card-japanese p-8">
-                        <h3 class="text-3xl font-bold mb-6 text-primary text-center">Découvrez notre histoire</h3>
-                        <div class="aspect-w-16 aspect-h-9">
-                            <iframe src="https://www.youtube.com/embed/TGKhrOFIjjY" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen class="w-full h-[400px] rounded-lg"></iframe>
-                        </div>
-                        <p class="mt-4 text-center text-lg text-gray-600">Documentaire NHK World sur Africa Samurai Consulting</p>
-                    </div>
-                </div>
-
-                <!-- Équipe avec design amélioré -->
-                <div class="mb-16">
-                    <h3 class="text-4xl font-bold text-center mb-12 text-primary">Notre Équipe</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                        <div class="card-japanese p-8 text-center">
-                            <img src="./assets/irotori-baroka.jpg" alt="Irotori Baroka"
-                                class="w-48 h-48 rounded-full mx-auto mb-6 object-cover shadow-lg">
-                            <h4 class="text-2xl font-bold text-primary mb-2">Irotori Baroka</h4>
-                            <p class="text-lg text-red-600 mb-4">Co-fondateur et CEO</p>
-                            <p class="text-gray-700 leading-relaxed">
-                                Expert en IA avec 10 ans d'expérience dans le domaine du Numérique,
-                                management d'entreprise et en Mentoring
-                            </p>
-                        </div>
-                        
-                        <div class="card-japanese p-8 text-center">
-                            <img src="./assets/david-kpondehou.jpg" alt="David Kpondehou"
-                                class="w-48 h-48 rounded-full mx-auto mb-6 object-cover shadow-lg">
-                            <h4 class="text-2xl font-bold text-primary mb-2">David Kpondehou</h4>
-                            <p class="text-lg text-red-600 mb-4">Co-fondateur</p>
-                            <p class="text-gray-700 leading-relaxed">
-                                Spécialiste en développement d'affaires internationales et
-                                Président de la Diaspora Africaine au Japon
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section class="statement section-shell" id="mission">
+      <div class="section-number">02</div>
+      <div class="statement-copy reveal">
+        <p class="eyebrow" data-copy-fr="Notre mission" data-copy-en="Our mission">Notre mission</p>
+        <h2 data-copy-fr="Réduire la distance entre le potentiel et l’accès." data-copy-en="Close the distance between potential and access.">Réduire la distance entre le potentiel et l’accès.</h2>
+      </div>
+      <div class="statement-detail reveal" data-delay="100">
+        <p data-copy-fr="Africa Samurai Consulting développe le capital humain par la technologie éducative et l’éducation technologique. Nous réunissons institutions, entreprises et communautés pour construire des solutions adaptées aux réalités africaines." data-copy-en="Africa Samurai Consulting develops human capital through education technology and technology education. We bring institutions, companies and communities together to build solutions adapted to African realities.">
+          Africa Samurai Consulting développe le capital humain par la technologie éducative et l’éducation technologique. Nous réunissons institutions, entreprises et communautés pour construire des solutions adaptées aux réalités africaines.
+        </p>
+        <p class="serif-note" data-copy-fr="La technologie compte lorsqu’elle devient une capacité humaine durable." data-copy-en="Technology matters when it becomes lasting human capability.">La technologie compte lorsqu’elle devient une capacité humaine durable.</p>
+      </div>
     </section>
 
-    <!-- Notre Histoire Section -->
-    <section id="history" class="section-japanese bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-5xl md:text-7xl font-bold text-center mb-16 text-primary" >Notre Histoire
-            </h2>
-            <div class="relative timeline-modern" >
-                <!-- Timeline -->
-
-                <!-- Timeline items -->
-                <div class="space-y-20">
-                    <!-- 2018 -->
-                    <div class="relative timeline-item">
-                        <div class="timeline-dot">
-                        </div>
-                        <div class="flex items-center justify-end md:justify-start md:ml-[calc(50%+2rem)] md:w-1/2">
-                            <div class="card-japanese p-8">
-                                <h3 class="text-3xl font-bold mb-4 text-primary">2018 - La Naissance</h3>
-                                <p class="text-xl text-primary">Fondation d'Africa Samurai Consulting par Irotori Baroka
-                                    et David Kpondehou, avec la vision de connecter l'Afrique au monde à travers la
-                                    technologie et l'éducation.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 2019-2020 -->
-                    <div class="relative timeline-item">
-                        <div class="timeline-dot">
-                        </div>
-                        <div class="flex items-center justify-start md:justify-end md:mr-[calc(50%+2rem)] md:w-1/2">
-                            <div class="card-japanese p-8">
-                                <h3 class="text-3xl font-bold mb-4 text-primary">2019-2020 - Le Premier Grand Projet
-                                </h3>
-                                <p class="text-xl text-primary">Collaboration majeure avec la JICA et le gouvernement
-                                    béninois. Formation de 24 jeunes en ingénierie web et création de ponts entre les
-                                    industries technologiques japonaises et africaines.</p>
-                                <p class="text-xl text-primary mt-4">Financement JICA : 5 millions de Yens pour former
-                                    24 jeunes Béninois dans les TIC (2021).</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 2021-2023 -->
-                    <div class="relative timeline-item">
-                        <div class="timeline-dot">
-                        </div>
-                        <div class="flex items-center justify-end md:justify-start md:ml-[calc(50%+2rem)] md:w-1/2">
-                            <div class="card-japanese p-8">
-                                <h3 class="text-3xl font-bold mb-4 text-primary">2021-2023 - L'Expansion</h3>
-                                <p class="text-xl text-primary">Lancement de programmes de renforcement de capacités,
-                                    bourses d'études en IA et ingénierie web, et organisation d'événements d'innovation
-                                    technologique à l'échelle continentale.</p>
-                                <p class="text-xl text-primary mt-4">Partenariat avec Dpro (Japon) : Formation de plus
-                                    de 100 jeunes Africains en ingénierie web et IA.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 2023 -->
-                    <div class="relative timeline-item">
-                        <div class="timeline-dot">
-                        </div>
-                        <div class="flex items-center justify-start md:justify-end md:mr-[calc(50%+2rem)] md:w-1/2">
-                            <div class="card-japanese p-8">
-                                <h3 class="text-3xl font-bold mb-4 text-primary">2023 - L'Année Charnière</h3>
-                                <p class="text-xl text-primary mb-4">Organisation de la conférence internationale sur la
-                                    cybersécurité avec Carnegie Mellon University et lancement du projet AOTS, formant
-                                    64 jeunes en IA et ingénierie web.</p>
-                                <a href="https://www.africa.engineering.cmu.edu/events/conferences/digital-infrastructure-cybersecurity/index.html"
-                                    class="text-secondary hover:underline">Découvrir la conférence</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 2024 -->
-                    <div class="relative timeline-item">
-                        <div class="timeline-dot">
-                        </div>
-                        <div class="flex items-center justify-end md:justify-start md:ml-[calc(50%+2rem)] md:w-1/2">
-                            <div class="card-japanese p-8">
-                                <h3 class="text-3xl font-bold mb-4 text-primary">2024 - L'Innovation Continue</h3>
-                                <p class="text-xl text-primary mb-4">
-                                    Projet AOTS : Formation de 64 jeunes en IA et ingénierie web, en partenariat avec
-                                    des entreprises japonaises.
-                                </p>
-                                <p class="text-xl text-primary mb-4">
-                                    Financement AOTS : 10 millions de Yens pour former 62 étudiants béninois en
-                                    ingénierie web et IA.
-                                </p>
-                                <p class="text-xl text-primary mb-4">
-                                    Lancement de trois initiatives majeures :
-                                </p>
-                                <ul class="list-disc list-inside text-xl text-primary mb-4">
-                                    <li>Le programme Japan Exchange</li>
-                                    <li>La plateforme de formation AIBoost</li>
-                                    <li>La Plateforme d'Orientation Scolaire IA (Decision.io)</li>
-                                </ul>
-                                <div class="space-y-2">
-                                    <a href="https://exchange.africasamurai.com/"
-                                        class="bg-primary text-white px-4 py-2 rounded-full inline-block hover:bg-secondary transition duration-300">Japan
-                                        Exchange</a>
-                                    <a href="https://bootcamp.africasamurai.com/"
-                                        class="bg-primary text-white px-4 py-2 rounded-full inline-block hover:bg-secondary transition duration-300">AIBoost</a>
-                                    <a href="https://decision-io.vercel.app/"
-                                        class="bg-primary text-white px-4 py-2 rounded-full inline-block hover:bg-secondary transition duration-300">Decision.io</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="expertise section-shell" id="expertise">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow" data-copy-fr="Ce que nous faisons" data-copy-en="What we do">Ce que nous faisons</p>
+          <h2 data-copy-fr="Du conseil à l’impact terrain." data-copy-en="From advisory to field impact.">Du conseil à l’impact terrain.</h2>
         </div>
+        <p data-copy-fr="Une chaîne d’exécution complète : comprendre le contexte, aligner les parties prenantes, concevoir le programme et coordonner sa mise en œuvre." data-copy-en="An end-to-end delivery chain: understand the context, align stakeholders, design the programme and coordinate implementation.">
+          Une chaîne d’exécution complète : comprendre le contexte, aligner les parties prenantes, concevoir le programme et coordonner sa mise en œuvre.
+        </p>
+      </div>
+
+      <div class="service-list">
+        <article class="service-row reveal">
+          <span class="service-index">01</span>
+          <h3 data-copy-fr="Programmes d’éducation" data-copy-en="Education programmes">Programmes d’éducation</h3>
+          <p data-copy-fr="Conseil, conception et coordination de programmes de formation technologique pour les institutions publiques, entreprises et partenaires au développement." data-copy-en="Advisory, design and coordination of technology training programmes for public institutions, companies and development partners.">
+            Conseil, conception et coordination de programmes de formation technologique pour les institutions publiques, entreprises et partenaires au développement.
+          </p>
+        </article>
+        <article class="service-row reveal">
+          <span class="service-index">02</span>
+          <h3 data-copy-fr="Facilitation institutionnelle" data-copy-en="Institutional facilitation">Facilitation institutionnelle</h3>
+          <p data-copy-fr="Mise en relation avec les décideurs de l’éducation, ministères, universités et organismes de formation, puis coordination locale des collaborations." data-copy-en="Connections with education decision-makers, ministries, universities and training bodies, followed by local coordination of collaborations.">
+            Mise en relation avec les décideurs de l’éducation, ministères, universités et organismes de formation, puis coordination locale des collaborations.
+          </p>
+        </article>
+        <article class="service-row reveal">
+          <span class="service-index">03</span>
+          <h3>La Forge IT Hub</h3>
+          <p data-copy-fr="Un espace de formation continue, de co-création, de mentorat et d’incubation, avec des stages pratiques pour les jeunes diplômés." data-copy-en="A space for continuous learning, co-creation, mentoring and incubation, with practical internships for young graduates.">
+            Un espace de formation continue, de co-création, de mentorat et d’incubation, avec des stages pratiques pour les jeunes diplômés.
+          </p>
+        </article>
+        <article class="service-row reveal">
+          <span class="service-index">04</span>
+          <h3 data-copy-fr="EdTech & IA hors-ligne" data-copy-en="EdTech & offline AI">EdTech & IA hors-ligne</h3>
+          <p data-copy-fr="Des environnements d’apprentissage assistés par IA conçus pour fonctionner avec une connectivité limitée, en partenariat avec DIVIC." data-copy-en="AI-assisted learning environments designed for low-connectivity settings, developed with DIVIC.">
+            Des environnements d’apprentissage assistés par IA conçus pour fonctionner avec une connectivité limitée, en partenariat avec DIVIC.
+          </p>
+        </article>
+      </div>
     </section>
 
-    <!-- Impact Section -->
-    <section id="impact" class="section-japanese bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-5xl md:text-7xl font-bold text-center mb-16 text-primary" >Notre Impact en
-                Chiffres</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="card-japanese p-8 text-center" >
-                    <i data-lucide="trending-up" class="w-16 h-16 mx-auto mb-4 text-primary"></i>
-                    <h3 class="text-3xl font-bold mb-2 text-primary">+80%</h3>
-                    <p class="text-xl text-primary">Augmentation de l'employabilité des participants</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-8 text-center"  >
-                    <i data-lucide="briefcase" class="w-16 h-16 mx-auto mb-4 text-primary"></i>
-                    <h3 class="text-3xl font-bold mb-2 text-primary">150+</h3>
-                    <p class="text-xl text-primary">Startups locales créées</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-8 text-center"  >
-                    <i data-lucide="award" class="w-16 h-16 mx-auto mb-4 text-primary"></i>
-                    <h3 class="text-3xl font-bold mb-2 text-primary">100+</h3>
-                    <p class="text-xl text-primary">Opportunité de Bourses d'études au Japon offerte au Jeune de notre
-                        réseau</p>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8">
-                <div class="bg-white rounded-lg shadow-lg p-8 text-center"  >
-                    <i data-lucide="dollar-sign" class="w-16 h-16 mx-auto mb-4 text-primary"></i>
-                    <h3 class="text-3xl font-bold mb-2 text-primary">100M+</h3>
-                    <p class="text-xl text-primary">FCFA collectés et investis en formation, bourse d'etudes et
-                        conferences</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-8 text-center"  >
-                    <i data-lucide="globe" class="w-16 h-16 mx-auto mb-4 text-primary"></i>
-                    <h3 class="text-3xl font-bold mb-2 text-primary">20+ Africains</h3>
-                    <p class="text-xl text-primary">Bénéficiaires de nos programmes de bourses</p>
-                </div>
-            </div>
-            <div class="mt-16 text-center">
-                <p class="text-2xl font-bold text-primary mb-8">Envie de faire partie de notre succès ?</p>
-                <a href="#"
-                    class="bg-primary text-white text-xl px-8 py-4 rounded-full hover:bg-secondary transition duration-300 calendly-trigger">Discutons
-                    en !</a>
-            </div>
+    <section class="impact" id="impact">
+      <div class="impact-inner section-shell">
+        <div class="impact-lead reveal">
+          <p class="eyebrow" data-copy-fr="Impact documenté" data-copy-en="Documented impact">Impact documenté</p>
+          <h2 data-copy-fr="Construire des trajectoires, pas seulement des formations." data-copy-en="Building trajectories, not just training.">Construire des trajectoires, pas seulement des formations.</h2>
+          <a class="text-link text-link--light" href="https://www.youtube.com/watch?v=TGKhrOFIjjY" target="_blank" rel="noopener" data-copy-fr="Voir le documentaire NHK World" data-copy-en="Watch the NHK World documentary">Voir le documentaire NHK World</a>
         </div>
+        <div class="impact-grid">
+          <div class="metric reveal">
+            <strong data-count="500">0</strong><span>+</span>
+            <p data-copy-fr="personnes accompagnées depuis 2018" data-copy-en="people reached since 2018">personnes accompagnées depuis 2018</p>
+          </div>
+          <div class="metric reveal" data-delay="80">
+            <strong data-count="350">0</strong>
+            <p data-copy-fr="jeunes placés en emplois et stages décents" data-copy-en="young people placed in decent jobs and internships">jeunes placés en emplois et stages décents</p>
+          </div>
+          <div class="metric reveal" data-delay="160">
+            <strong data-count="35">0</strong><span>+</span>
+            <p data-copy-fr="jeunes soutenus dans la création de startups technologiques" data-copy-en="young people supported to create technology startups">jeunes soutenus dans la création de startups technologiques</p>
+          </div>
+          <div class="metric metric--year reveal" data-delay="240">
+            <strong>2018</strong>
+            <p data-copy-fr="année de création au Bénin" data-copy-en="founded in Benin">année de création au Bénin</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Nos Partenaires Section -->
-    <section id="partners" class="section-japanese bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-5xl md:text-7xl font-bold text-center mb-16 text-primary" >Nos Partenaires
-            </h2>
-            <div class="flex flex-wrap justify-center items-center gap-8 max-w-4xl mx-auto">
-                <div class="card-japanese p-6" >
-                    <img src="./assets/dpro-logo.png" alt="Dpro (Japon)" class="h-16 object-contain">
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-lg"  >
-                    <img src="./assets/jica-logo.png" alt="JICA" class="h-16 object-contain">
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-lg"  >
-                    <img src="./assets/aots-logo.png" alt="AOTS" class="h-16 object-contain">
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-lg"  >
-                    <img src="./assets/cmu-logo.png" alt="Carnegie Mellon University" class="h-16 object-contain">
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-lg"  >
-                    <img src="./assets/adnj-logo.png" alt="ADNJ" class="h-16 object-contain">
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-lg"  >
-                    <img src="./assets/yali-logo.png" alt="YALI" class="h-16 object-contain">
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-lg"  >
-                    <img src="./assets/insti-logo.png" alt="Université INSTI" class="h-16 object-contain">
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-lg"  >
-                    <img src="./assets/epac-logo.png" alt="EPAC Benin" class="h-16 object-contain">
-                </div>
-            </div>
+    <section class="japan section-shell" id="japan">
+      <div class="japan-heading reveal">
+        <p class="eyebrow">Africa × Japan</p>
+        <h2 data-copy-fr="Une passerelle opérationnelle entre innovation japonaise et terrain africain." data-copy-en="An operational bridge between Japanese innovation and African realities.">
+          Une passerelle opérationnelle entre innovation japonaise et terrain africain.
+        </h2>
+      </div>
+
+      <div class="bridge reveal" aria-label="Modèle de collaboration">
+        <div class="bridge-node">
+          <span>01 / Japan</span>
+          <strong data-copy-fr="Technologie & savoir-faire" data-copy-en="Technology & expertise">Technologie & savoir-faire</strong>
         </div>
+        <div class="bridge-line" aria-hidden="true"><i></i></div>
+        <div class="bridge-node bridge-node--center">
+          <span>02 / ASC</span>
+          <strong data-copy-fr="Accès institutionnel & exécution locale" data-copy-en="Institutional access & local delivery">Accès institutionnel & exécution locale</strong>
+        </div>
+        <div class="bridge-line" aria-hidden="true"><i></i></div>
+        <div class="bridge-node">
+          <span>03 / Benin</span>
+          <strong data-copy-fr="Pilote, mesure & déploiement" data-copy-en="Pilot, measure & scale">Pilote, mesure & déploiement</strong>
+        </div>
+      </div>
+
+      <div class="case-study">
+        <div class="case-index reveal">CASE / 01</div>
+        <div class="case-copy reveal" data-delay="80">
+          <h3 data-copy-fr="IA éducative hors-ligne avec DIVIC" data-copy-en="Offline education AI with DIVIC">IA éducative hors-ligne avec DIVIC</h3>
+          <p data-copy-fr="ASC et DIVIC développent une infrastructure capable de fournir aux élèves du secondaire un retour immédiat et progressif sur leurs exercices de mathématiques manuscrits, en français et sans connexion internet permanente." data-copy-en="ASC and DIVIC are developing infrastructure that can give secondary-school students immediate, step-by-step feedback on handwritten mathematics, in French and without continuous internet access.">
+            ASC et DIVIC développent une infrastructure capable de fournir aux élèves du secondaire un retour immédiat et progressif sur leurs exercices de mathématiques manuscrits, en français et sans connexion internet permanente.
+          </p>
+        </div>
+        <ul class="case-points reveal" data-delay="160">
+          <li data-copy-fr="Accès personnalisé aux apprentissages STEM" data-copy-en="Personalised access to STEM learning">Accès personnalisé aux apprentissages STEM</li>
+          <li data-copy-fr="Réduction de la charge de correction des enseignants" data-copy-en="Reduced grading burden for teachers">Réduction de la charge de correction des enseignants</li>
+          <li data-copy-fr="Données anonymisées pour éclairer les politiques publiques" data-copy-en="Anonymised data to inform public policy">Données anonymisées pour éclairer les politiques publiques</li>
+        </ul>
+      </div>
     </section>
 
-
-    <!-- Nos Prochains Événements Section -->
-    <section id="events" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-5xl md:text-7xl font-bold text-center mb-16 text-primary" >Prochains
-                Événements</h2>
-            <p class="text-2xl text-center mb-12 text-primary" >Nous participons aux événements
-                internationaux majeurs :</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                <div class="bg-gray-100 rounded-2xl shadow-lg overflow-hidden" >
-                    <img src="./assets/osaka-forum.jpg" alt="Osaka Africa Business Forum"
-                        class="w-full h-64 object-cover">
-                    <div class="p-8">
-                        <h3 class="text-3xl font-bold mb-4 text-primary">2024 Osaka Africa Business Forum (OABF)</h3>
-                        <p class="text-xl mb-6">Renforcer nos liens avec le marché japonais et explorer de nouvelles
-                            opportunités de collaboration</p>
-                        <div class="flex justify-between items-center text-primary">
-                            <div class="flex items-center">
-                                <i data-lucide="calendar" class="w-6 h-6 mr-2"></i>
-                                <span>17-28 Oct 2024</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i data-lucide="map-pin" class="w-6 h-6 mr-2"></i>
-                                <span>Osaka, Japon</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gray-100 rounded-2xl shadow-lg overflow-hidden"  >
-                    <img src="./assets/yali-expo.jpg" alt="YALI ALUMNI EXPO AND TRADE SHOW"
-                        class="w-full h-64 object-cover">
-                    <div class="p-8">
-                        <h3 class="text-3xl font-bold mb-4 text-primary">YALI ALUMNI EXPO AND TRADE SHOW</h3>
-                        <p class="text-xl mb-6">Partager notre expertise, établir de nouveaux partenariats et inspirer
-                            la prochaine génération de leaders africains</p>
-                        <div class="flex justify-between items-center text-primary">
-                            <div class="flex items-center">
-                                <i data-lucide="calendar" class="w-6 h-6 mr-2"></i>
-                                <span>11-14 Nov 2024</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i data-lucide="map-pin" class="w-6 h-6 mr-2"></i>
-                                <span>Cape Town, Afrique du Sud</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="partners section-shell">
+      <div class="section-heading section-heading--compact reveal">
+        <div>
+          <p class="eyebrow" data-copy-fr="Écosystème" data-copy-en="Ecosystem">Écosystème</p>
+          <h2 data-copy-fr="Ils ont travaillé avec nous." data-copy-en="Organisations we have worked with.">Ils ont travaillé avec nous.</h2>
         </div>
+      </div>
+      <div class="logo-grid reveal">
+        <figure><img src="./assets/dpro-logo.png" alt="DIVIC / DPro"></figure>
+        <figure><img src="./assets/jica-logo.png" alt="JICA"></figure>
+        <figure><img src="./assets/aots-logo.png" alt="AOTS"></figure>
+        <figure><img src="./assets/cmu-logo.png" alt="Carnegie Mellon University Africa"></figure>
+        <figure><img src="./assets/yali-logo.png" alt="YALI"></figure>
+        <figure><img src="./assets/insti-logo.png" alt="INSTI"></figure>
+      </div>
     </section>
 
-    <!-- Section Objectifs Futurs -->
-    <section id="objectifs-futurs" class="section-japanese bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center mb-12">
-                <div class="md:w-1/2 mb-8 md:mb-0" >
-                    <img src="./assets/vision-future.jpg" alt="Vision pour l'avenir" class="rounded-2xl w-full h-auto">
-                </div>
-                <div class="md:w-1/2 md:pl-8" >
-                    <h2 class="text-4xl md:text-6xl font-bold text-primary mb-6">Notre Vision Audacieuse pour l'Afrique
-                        de Demain</h2>
-                    <p class="text-xl">Nous nous engageons à façonner un avenir brillant et innovant pour le continent
-                        africain, en combinant expertise technologique et collaborations stratégiques.</p>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                <div class="card-japanese p-8"  >
-                    <h3 class="text-3xl font-bold mb-6 text-primary">Catalyseur d'Innovation</h3>
-                    <p class="text-xl mb-4">Nous aspirons à transformer le paysage africain en :</p>
-                    <ul class="text-lg list-disc list-inside space-y-2">
-                        <li>Concevant des solutions tech révolutionnaires adaptées à l'Afrique</li>
-                        <li>Établissant des pôles d'excellence en ingénierie et en langues</li>
-                        <li>Propulsant le transfert de technologies dans les secteurs stratégiques</li>
-                    </ul>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-lg"  >
-                    <h3 class="text-3xl font-bold mb-6 text-primary">Architecte de Collaborations</h3>
-                    <p class="text-xl mb-4">Notre mission audacieuse vise à :</p>
-                    <ul class="text-lg list-disc list-inside space-y-2">
-                        <li>Ouvrir les portes du marché africain aux entreprises mondiales</li>
-                        <li>Forger des alliances dans les énergies vertes et l'agriculture durable</li>
-                        <li>Déployer notre expertise pour résoudre les défis commerciaux complexes</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="mt-12 text-center"  >
-                <p class="text-2xl text-primary mb-8">Ensemble, façonnons un avenir radieux pour l'Afrique... Embarquez
-                    dans cette aventure extraordinaire</p>
-                <a href="#contact"
-                    class="bg-primary text-white text-xl font-bold py-3 px-8 rounded-full hover:bg-primary-dark transition duration-300 calendly-trigger">Prendre
-                    Rendez-vous !</a>
-            </div>
+    <section class="founder section-shell">
+      <div class="founder-photo reveal" data-parallax="0.05">
+        <img src="./assets/irotori-baroka.jpg" alt="Portrait de Irotori Baroka, fondateur et CEO d’Africa Samurai Consulting">
+      </div>
+      <div class="founder-copy reveal" data-delay="100">
+        <p class="eyebrow" data-copy-fr="Direction" data-copy-en="Leadership">Direction</p>
+        <blockquote data-copy-fr="L’Afrique ne manque pas de talent. Notre rôle est de construire les conditions qui permettent à ce talent de circuler, d’apprendre et de créer." data-copy-en="Africa does not lack talent. Our role is to build the conditions for that talent to move, learn and create.">
+          L’Afrique ne manque pas de talent. Notre rôle est de construire les conditions qui permettent à ce talent de circuler, d’apprendre et de créer.
+        </blockquote>
+        <div class="founder-meta">
+          <strong>Irotori Baroka</strong>
+          <span data-copy-fr="Fondateur & CEO" data-copy-en="Founder & CEO">Fondateur & CEO</span>
         </div>
-    </section>
-    <!-- Section Témoignages -->
-    <section id="testimonials" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl md:text-6xl font-bold text-center mb-12 text-primary" >Témoignages</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="card-japanese p-6 transform hover:scale-105 transition duration-300"  >
-                    <h3 class="text-2xl font-bold text-primary mb-2">Aminata Diallo</h3>
-                    <p class="text-lg text-gray-700 italic">"Grâce à la formation en IA d'Africa Samurai, j'ai décroché un poste de data scientist à Dakar."</p>
-                </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"  >
-                    <h3 class="text-2xl font-bold text-primary mb-2">Kofi Mensah</h3>
-                    <p class="text-lg text-gray-700 italic">"La bourse d'études m'a permis d'étudier l'ingénierie robotique au Japon. Aujourd'hui, je dirige ma start-up à Accra."</p>
-                </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"  >
-                    <h3 class="text-2xl font-bold text-primary mb-2">Fatou Ndiaye</h3>
-                    <p class="text-lg text-gray-700 italic">"Le programme de mentorat m'a guidée dans ma carrière en cybersécurité. J'ai un poste de responsable IT à Abidjan."</p>
-                </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"  >
-                    <h3 class="text-2xl font-bold text-primary mb-2">Yannick Kamga</h3>
-                    <p class="text-lg text-gray-700 italic">"Le bootcamp en développement web a été le tremplin de ma carrière. Je suis maintenant développeur full-stack."</p>
-                </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"  >
-                    <h3 class="text-2xl font-bold text-primary mb-2">Aisha Mohammed</h3>
-                    <p class="text-lg text-gray-700 italic">"J'ai participé à un échange culturel au Japon, ce qui m'a aidée à décrocher un emploi dans une multinationale."</p>
-                </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"  >
-                    <h3 class="text-2xl font-bold text-primary mb-2">Ousmane Sow</h3>
-                    <p class="text-lg text-gray-700 italic">"Le programme d'entrepreneuriat m'a donné les outils pour lancer ma start-up dans l'agritech."</p>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
 
-     <!-- Nouveau Footer -->
-     <footer class="bg-white py-16">
-         <div class="container mx-auto px-4">
-             <h1 class="text-8xl font-light text-gray-200 mb-8">Africa Samurai !<span
-                 class="inline-block w-4 h-4 bg-white rounded-full ml-3"></span></h1>
-             <div class="flex flex-wrap justify-between">
-                 <div class="w-full md:w-1/4 mb-8 md:mb-0">
-                     <svg class="w-10 h-10 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                         <path
-                             d="M19 6.94L12.06 0L5.12 6.94C3.02 9.04 3.02 12.52 5.12 14.62L12.06 21.56L19 14.62C21.1 12.52 21.1 9.04 19 6.94ZM12.06 15.5C10.23 15.5 8.74 14.01 8.74 12.18C8.74 10.35 10.23 8.86 12.06 8.86C13.89 8.86 15.38 10.35 15.38 12.18C15.38 14.01 13.89 15.5 12.06 15.5Z"
-                             fill="currentColor" />
-                     </svg>
-                     <p class="text-gray-500 text-sm">
-                         © 2024 Africa Samurai<br>
-                         Tous droits réservés.
-                     </p>
-                 </div>
-                 <div class="w-full md:w-1/4 mb-8 md:mb-0">
-                     <h3 class="text-gray-600 font-light mb-4">Projects</h3>
-                     <ul class="space-y-2">
-                         <li><a href="https://decision-io.vercel.app/startup" class="text-gray-500 hover:text-gray-700">Decision</a></li>
-                         <li><a href="https://bootcamp.africasamurai.com/" class="text-gray-500 hover:text-gray-700">Ai Boost</a></li>
-                         <li><a href="https://exchange.africasamurai.com/" class="text-gray-500 hover:text-gray-700">Exchange Samurai</a></li>
-                     </ul>
-                 </div>
-                 <div class="w-full md:w-1/4 mb-8 md:mb-0">
-                     <h3 class="text-gray-600 font-light mb-4">Légal</h3>
-                     <ul class="space-y-2">
-                         <li><a href="privacy-policy.html" class="text-gray-500 hover:text-gray-700">Politique de confidentialité</a></li>
-                         <li><a href="gdpr-policy.html" class="text-gray-500 hover:text-gray-700">Politique RGPD</a></li>
-                         <li><a href="terms-of-service.html" class="text-gray-500 hover:text-gray-700">Conditions de service</a></li>
-                     </ul>
-                 </div>
-                 <div class="w-full md:w-1/4">
-                     <h3 class="text-gray-600 font-light mb-4">Réseaux</h3>
-                     <ul class="space-y-2">
-                         <!-- <li><a href="#" class="text-gray-500 hover:text-gray-700">Twitter</a></li> -->
-                         <li><a href="https://www.linkedin.com/company/africa-samurai-consulting" class="text-gray-500 hover:text-gray-700">LinkedIn</a></li>
-                         <li><a href="https://www.facebook.com/AfricaSamurai" class="text-gray-500 hover:text-gray-700">Facebook</a></li>
-                     </ul>
-                 </div>
-             </div>
-         </div>
-     </footer>
+    <section class="contact" id="contact">
+      <div class="contact-inner section-shell reveal">
+        <p class="eyebrow" data-copy-fr="Commencer une collaboration" data-copy-en="Start a collaboration">Commencer une collaboration</p>
+        <h2 data-copy-fr="Un projet utile commence par une conversation claire." data-copy-en="Useful projects begin with a clear conversation.">Un projet utile commence par une conversation claire.</h2>
+        <div class="contact-actions">
+          <button class="contact-button calendly-trigger" type="button" data-copy-fr="Planifier un échange" data-copy-en="Schedule a conversation">Planifier un échange</button>
+          <a class="contact-email" href="mailto:birotori@gmail.com">birotori@gmail.com</a>
+        </div>
+        <div class="contact-meta">
+          <span>Abomey-Calavi, Bénin</span>
+          <span>+229 67 15 39 74</span>
+          <span>+81 70 411 167 07</span>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <script src="script.js"></script>
-    <script>
-        lucide.createIcons();
+  <footer class="site-footer section-shell">
+    <div class="footer-brand">
+      <img src="./assets/africa-samurai-logo.png" alt="">
+      <p>Africa Samurai Consulting</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://kotolink.org/" target="_blank" rel="noopener">Kotolink</a>
+      <a href="https://www.linkedin.com/company/africa-samurai-consulting" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.facebook.com/AfricaSamurai" target="_blank" rel="noopener">Facebook</a>
+      <a href="./privacy-policy.html" data-copy-fr="Confidentialité" data-copy-en="Privacy">Confidentialité</a>
+    </div>
+    <p class="footer-legal">© <span id="year"></span> Africa Samurai Consulting · RCCM RB/COT/18 B 22904</p>
+  </footer>
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const closeMobileMenuButton = document.getElementById('close-mobile-menu');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+  <dialog class="calendly-modal" id="calendly-modal">
+    <button class="modal-close" type="button" aria-label="Fermer">Fermer</button>
+    <iframe title="Prendre rendez-vous avec Africa Samurai Consulting" src="https://calendly.com/baroka/connecting-meeting"></iframe>
+  </dialog>
 
-            function openMobileMenu() {
-                mobileMenu.classList.remove('-translate-x-full');
-                mobileMenu.classList.add('translate-x-0');
-                mobileMenuOverlay.classList.remove('hidden');
-                document.body.style.overflow = 'hidden'; // Empêche le défilement du body
-            }
-
-            function closeMobileMenu() {
-                mobileMenu.classList.add('-translate-x-full');
-                mobileMenu.classList.remove('translate-x-0');
-                mobileMenuOverlay.classList.add('hidden');
-                document.body.style.overflow = ''; // Réactive le défilement du body
-            }
-
-            mobileMenuButton.addEventListener('click', openMobileMenu);
-            closeMobileMenuButton.addEventListener('click', closeMobileMenu);
-            mobileMenuOverlay.addEventListener('click', closeMobileMenu);
-
-            // Fermer le menu mobile lorsqu'un lien est cliqué
-            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-            mobileMenuLinks.forEach(link => {
-                link.addEventListener('click', closeMobileMenu);
-            });
-
-            // Gérer le redimensionnement de la fenêtre
-            window.addEventListener('resize', () => {
-                if (window.innerWidth >= 768) {
-                    closeMobileMenu();
-                }
-            });
-
-            // Initialiser les icônes Lucide
-            lucide.createIcons();
-        });
-    </script>
+  <script src="./script.js"></script>
 </body>
-
 </html>
