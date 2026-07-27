@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 820">
+  <style>
+    .grid{fill:none;stroke:#8d887f;stroke-width:.7;stroke-dasharray:2 13;opacity:.14}
+    .land{fill:#c79c76;fill-opacity:.025;stroke:#77746d;stroke-width:1;opacity:.28}
+    .route{fill:none;stroke:#8c332b;stroke-width:1.2;stroke-dasharray:3 10;opacity:.44}
+    .route.alt{stroke:#70766d;opacity:.35}
+    .node{fill:#f8f6f1;stroke:#8c332b;stroke-width:1.1;opacity:.7}
+    .origin{fill:#8c332b;stroke:#f2eee7;stroke-width:2}
+    .label{fill:#62635f;font:600 9px Manrope,Arial,sans-serif;letter-spacing:2.5px;opacity:.48}
+    .traveller{fill:#8c332b;opacity:.65}
+    .traveller.alt{fill:#70766d}
+    @media (prefers-reduced-motion:reduce){.traveller{display:none}}
+  </style>
+
+  <g class="grid">
+    <path d="M40 160H1360M40 410H1360M40 660H1360"/>
+    <path d="M180 35V785M450 35V785M720 35V785M990 35V785M1260 35V785"/>
+  </g>
+
+  <g class="land">
+    <path d="M488 270l-55 35-30 69 22 60 39 25 20 89 56 113 45 10 30-52 16-91 59-96-20-77-65-44-43-52z"/>
+    <path d="M481 190l25-48 59-15 40 23 29-19 54 26 23 42-36 30-74-4-41 42-49-18z"/>
+    <path d="M673 157l69-46 120 5 80 35 95-8 94 37 91 4 78 50-19 46-86 5-60 53-105 11-77-40-91 16-60-34-75-10-53-49z"/>
+    <path d="M1198 302l28-14 30 18-9 31-35 9-23-21z"/>
+    <path d="M270 251l-73-38-70 15-46 62 31 56 68 18 54 69 50-26 22-76z"/>
+  </g>
+
+  <g>
+    <path id="to-europe" class="route" d="M495 420Q488 263 568 192">
+      <animate attributeName="stroke-dashoffset" from="0" to="-260" dur="24s" repeatCount="indefinite"/>
+    </path>
+    <path id="to-japan" class="route" d="M495 420Q797 105 1215 320">
+      <animate attributeName="stroke-dashoffset" from="0" to="-340" dur="31s" repeatCount="indefinite"/>
+    </path>
+    <path id="to-asia" class="route alt" d="M495 420Q805 432 1001 315">
+      <animate attributeName="stroke-dashoffset" from="0" to="-290" dur="27s" repeatCount="indefinite"/>
+    </path>
+    <path id="to-america" class="route alt" d="M495 420Q305 175 178 310">
+      <animate attributeName="stroke-dashoffset" from="0" to="-250" dur="34s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <g>
+    <circle class="origin" cx="495" cy="420" r="8">
+      <animate attributeName="r" values="6;10;6" dur="3.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".45;1;.45" dur="3.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle class="node" cx="568" cy="192" r="4"/>
+    <circle class="node" cx="1001" cy="315" r="4"/>
+    <circle class="node" cx="1215" cy="320" r="4"/>
+    <circle class="node" cx="178" cy="310" r="4"/>
+  </g>
+
+  <g class="label">
+    <text x="468" y="454">BENIN</text>
+    <text x="532" y="169">EUROPE</text>
+    <text x="970" y="291">ASIA</text>
+    <text x="1230" y="326">JAPAN</text>
+    <text x="112" y="289">AMERICAS</text>
+  </g>
+
+  <circle class="traveller" r="3.5">
+    <animateMotion dur="9s" repeatCount="indefinite" path="M495 420Q488 263 568 192"/>
+  </circle>
+  <circle class="traveller" r="3.5">
+    <animateMotion dur="14s" begin="-5s" repeatCount="indefinite" path="M495 420Q797 105 1215 320"/>
+  </circle>
+  <circle class="traveller alt" r="3">
+    <animateMotion dur="12s" begin="-2s" repeatCount="indefinite" path="M495 420Q805 432 1001 315"/>
+  </circle>
+</svg>

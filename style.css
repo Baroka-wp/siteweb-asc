@@ -28,6 +28,7 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   color: var(--ink);
   background: var(--paper);
@@ -36,6 +37,28 @@ body {
   line-height: 1.65;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-image: url("./assets/world-connections.svg");
+  background-position: center 70px;
+  background-repeat: repeat-y;
+  background-size: 1500px 880px;
+  opacity: .72;
+  pointer-events: none;
+}
+
+body > header,
+body > nav,
+body > main,
+body > footer,
+body > dialog {
+  position: relative;
+  z-index: 1;
 }
 
 body.menu-open {
@@ -271,7 +294,7 @@ button:focus-visible {
   position: relative;
   min-height: 100svh;
   padding: clamp(8.5rem, 14vh, 11rem) max(32px, calc((100vw - 1320px) / 2)) 0;
-  background: var(--paper);
+  background: rgba(242, 238, 231, .72);
   overflow: hidden;
 }
 
@@ -282,6 +305,7 @@ button:focus-visible {
 }
 
 .world-network {
+  display: none;
   position: absolute;
   z-index: 0;
   top: 4.5rem;
@@ -667,7 +691,7 @@ button:focus-visible {
 }
 
 .impact {
-  background: #252623;
+  background: rgba(37, 38, 35, .93);
   color: var(--paper-light);
 }
 
@@ -938,7 +962,7 @@ button:focus-visible {
 
 .contact {
   padding-block: var(--section-space);
-  background: var(--brick);
+  background: rgba(140, 51, 43, .94);
   color: var(--white);
 }
 
@@ -1202,11 +1226,11 @@ button:focus-visible {
 }
 
 .offers-block--b2b2c {
-  background: var(--paper-light);
+  background: rgba(248, 246, 241, .88);
 }
 
 .offers-block--b2g {
-  background: #252623;
+  background: rgba(37, 38, 35, .93);
   color: var(--paper-light);
 }
 
@@ -1494,6 +1518,12 @@ button:focus-visible {
     font-size: 1.04rem;
   }
 
+  body::before {
+    background-position: 42% 70px;
+    background-size: 980px 575px;
+    opacity: .58;
+  }
+
   .site-header {
     min-height: 72px;
     padding-inline: 18px;
@@ -1754,7 +1784,7 @@ button:focus-visible {
   }
 
   .b2g-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1787,5 +1817,9 @@ button:focus-visible {
 
   .network-traveller {
     display: none;
+  }
+
+  body::before {
+    background-image: none;
   }
 }
