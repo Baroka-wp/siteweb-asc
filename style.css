@@ -1224,6 +1224,19 @@ button:focus-visible {
   line-height: .92;
 }
 
+.target-hero--service h1 {
+  max-width: 15ch;
+  font-size: clamp(3.2rem, 6vw, 6.8rem);
+}
+
+.target-hero--service {
+  padding-top: clamp(8rem, 14vh, 10rem);
+}
+
+.target-hero--service .target-back {
+  margin-bottom: clamp(2.5rem, 5vh, 4rem);
+}
+
 .target-summary {
   max-width: 38ch;
   margin: 0;
@@ -1411,6 +1424,168 @@ button:focus-visible {
 
 .b2g-proof > p {
   max-width: 56ch;
+  margin: 0;
+  color: #d0cfc8;
+}
+
+.deliverable-rail {
+  border-top: 1px solid var(--ink);
+}
+
+.deliverable-row {
+  display: grid;
+  grid-template-columns: .45fr 1fr 1.25fr;
+  gap: clamp(1.5rem, 5vw, 6rem);
+  align-items: baseline;
+  padding: clamp(2rem, 4vw, 3.5rem) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.deliverable-row > span,
+.bid-step > span,
+.engagement-strip span,
+.evidence-note > span {
+  font-family: var(--sans);
+  font-size: .62rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.deliverable-row h3,
+.bid-step h3 {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: clamp(1.5rem, 2.6vw, 2.8rem);
+  font-weight: 300;
+  letter-spacing: -.04em;
+  line-height: 1.05;
+}
+
+.deliverable-row p,
+.bid-step p {
+  max-width: 44ch;
+  margin: 0;
+  color: var(--muted);
+}
+
+.engagement-strip {
+  display: grid;
+  grid-template-columns: .65fr .8fr 1.4fr;
+  margin-top: clamp(3rem, 6vw, 5.5rem);
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+.engagement-strip > div {
+  min-height: 165px;
+  padding: 1.6rem 1.8rem 1.8rem 0;
+  border-right: 1px solid var(--line);
+}
+
+.engagement-strip > div + div {
+  padding-left: 1.8rem;
+}
+
+.engagement-strip > div:last-child {
+  border-right: 0;
+}
+
+.engagement-strip span,
+.engagement-strip strong {
+  display: block;
+}
+
+.engagement-strip strong {
+  max-width: 28ch;
+  margin-top: 2.6rem;
+  font-family: var(--sans);
+  font-size: clamp(1.05rem, 1.7vw, 1.55rem);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.corridor-block {
+  padding-block: var(--section-space);
+  background: rgba(231, 225, 216, .88);
+}
+
+.corridor-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr 1fr;
+  gap: clamp(3rem, 8vw, 9rem);
+  align-items: start;
+}
+
+.corridor-grid h2 {
+  max-width: 12ch;
+  margin: 0;
+  font-family: var(--sans);
+  font-size: clamp(2.8rem, 5vw, 5.5rem);
+  font-weight: 300;
+  letter-spacing: -.055em;
+  line-height: .98;
+}
+
+.corridor-grid > p {
+  max-width: 42ch;
+  margin: 0;
+  color: var(--muted);
+}
+
+.corridor-sectors {
+  display: grid;
+  border-top: 1px solid var(--ink);
+}
+
+.corridor-sectors span {
+  padding: .9rem 0;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--sans);
+  font-size: .78rem;
+}
+
+.bid-workstream {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid #5a5b55;
+  border-left: 1px solid #5a5b55;
+}
+
+.bid-step {
+  min-height: 350px;
+  padding: clamp(1.4rem, 2.4vw, 2.4rem);
+  border-right: 1px solid #5a5b55;
+  border-bottom: 1px solid #5a5b55;
+}
+
+.bid-step h3 {
+  margin-top: clamp(4rem, 7vw, 7rem);
+}
+
+.bid-step p {
+  margin-top: 1rem;
+  color: #b9b8b1;
+}
+
+.engagement-strip--dark {
+  border-color: #77786f;
+}
+
+.engagement-strip--dark > div {
+  border-color: #5a5b55;
+}
+
+.evidence-note {
+  display: grid;
+  grid-template-columns: .4fr 1.6fr;
+  gap: clamp(2rem, 7vw, 8rem);
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid #5a5b55;
+}
+
+.evidence-note p {
+  max-width: 72ch;
   margin: 0;
   color: #d0cfc8;
 }
@@ -1731,7 +1906,9 @@ button:focus-visible {
   .offers-intro,
   .offers-section-head,
   .target-hero-grid,
-  .b2g-proof {
+  .b2g-proof,
+  .corridor-grid,
+  .evidence-note {
     grid-template-columns: 1fr;
   }
 
@@ -1790,6 +1967,46 @@ button:focus-visible {
 
   .b2g-grid {
     grid-template-columns: 1fr;
+  }
+
+  .deliverable-row {
+    grid-template-columns: .25fr 1fr;
+  }
+
+  .deliverable-row p {
+    grid-column: 2;
+  }
+
+  .engagement-strip,
+  .bid-workstream {
+    grid-template-columns: 1fr;
+  }
+
+  .engagement-strip > div {
+    min-height: auto;
+    padding: 1.5rem 0 2rem;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .engagement-strip > div + div {
+    padding-left: 0;
+  }
+
+  .engagement-strip > div:last-child {
+    border-bottom: 0;
+  }
+
+  .engagement-strip strong {
+    margin-top: 1.25rem;
+  }
+
+  .bid-step {
+    min-height: auto;
+  }
+
+  .bid-step h3 {
+    margin-top: 3rem;
   }
 }
 
